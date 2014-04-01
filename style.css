@@ -20,5 +20,6 @@ body { background-color: #fff; cursor: default; margin: 0; padding: 0; }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { color: #FFF;background-color: transparent; }
 
-
 .navbar label { font-size: 18px;color: #FFF;padding-right: 10px;padding-top: 3px;font-weight: 400; }
+
+.version{ color: #FFF;float: right;display: inline-block;padding: 15px; }
