@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Title</title>
+	<meta charset="UTF-8">
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<style>
+        .black:focus{outline-color:black;}
+        .red:focus{outline-color:#d9534f;}
+        .blue:focus{outline-color:#428bca;}
+        .orange:focus{outline-color:#f0ad4e;}
+        .green:focus{outline-color:#5cb85c;}
+        .aqua:focus{outline-color:#5bc0de;}
+        /*SubMenu*/
+        .dropdown-submenu{position:relative;}
+        .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:0px;margin-left:5px;}
+        /*.dropdown-submenu:hover>.dropdown-menu{display:block;}*/
+        .dropdown-submenu.pull-left{float:none!important;}
+        .dropdown-submenu.pull-left>.dropdown-menu{left:-111%;margin-left:10px;}
+        .fa.fa-caret-right{top: 3px;position: relative;}
+	</style>
+</head>
+<body style="">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+          <a class="navbar-brand" href="#"><i class="icon-home icon-white"> </i>SandyBox Example</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+			    <li class="menu-item"><a href="#">First Level</a></li>
+                <li class="menu-item dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">First Level <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="menu-item"><a href="#">Second Level</a></li>
+                        <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Second Level <i class="fa fa-caret-right pull-right"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="menu-item "><a href="#">Third Level</a></li>
+                                <li class="menu-item "><a href="#">Third Level</a></li>
+                                <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Third Level <i class="fa fa-caret-right pull-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Fourth Level</a></li>
+                                        <li><a href="#">Fourth Level</a></li>
+                                        <li><a href="#">Fourth Level</a></li>
+                                        <li><a href="#">Fourth Level</a></li>
+                                        <li class="menu-item dropdown dropdown-submenu pull-left"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Fourth Level <i class="fa fa-caret-right pull-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Fifth Level</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="#">Second Level</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">First Level</a></li>
+            </ul>
+			<div class="navbar-right">
+			    <button data-color="black" class="navbar-btn btn btn-default body-color-change">Default</button>
+                <button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"> </button>
+                <button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"> </button>
+                <button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change"> </button>
+                <button data-color="#5cb85c" class="green navbar-btn btn btn-success body-color-change"> </button>
+                <button data-color="#5bc0de" class="aqua navbar-btn btn btn-info body-color-change"> </button>
+			</div>
+		</div>
+	</div>
+	<div style="height: 70px;"></div>
+    <div class="container">
+        
+    	<h1>Header</h1>
+    	<h2>Nemo</h2>
+    	<img height="150" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/005/cache/clown-fish_500_600x450.jpg">
+    	<h3>↑ ↑ ↓ ↓ ← → ← → b a</h3>
+    	<p>Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.</p>
+    	<p>Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.</p>
+    	<p>Magna ad, mauris sit quisque amet porta rutrum nunc, in justo metus fringilla pellentesque venenatis, metus eget praesent, blanditiis maecenas suscipit aliquam nec placerat. Potenti erat dolor sit lobortis, pellentesque sit vestibulum commodo at mauris ipsum, wisi justo nulla leo feugiat nonummy, non non porta tortor et elit quis, ut lectus lorem rhoncus. Ut ligula fusce enim lectus condimentum, wisi magna et, suspendisse lacus lobortis, mi vulputate suspendisse eget vestibulum enim. Nam parturient, fermentum semper, sed parturient sed vitae consequat. Eget metus felis dictum, vulputate et morbi molestie. Consequat etiam arcu amet bibendum aenean eu, egestas lacus sed fusce arcu id sociis. Id nulla est morbi sed eu in, neque nullam eros amet vestibulum ornare odio, dignissim adipiscing, in nunc tincidunt ut mattis quis. Consectetuer enim nullam. Fermentum malesuada adipiscing ridiculus morbi sed, in ultrices nulla, erat id cursus, risus litora. Lacus egestas pede accumsan augue euismod, posuere nunc ullamcorper maecenas consectetuer et, aenean in at dui justo lacus ullamcorper. Eros aenean ante erat posuere, sit amet pellentesque.</p>
+    </div>
+    <script>
+        $('.body-color-change').click(function(){
+            var color = $(this).data("color");
+            $('body').css('color',color);
+        });
+        
+        // Multiple Layer Menu
+        $(document).ready(function() {
+            $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+                // Avoid following the href location when clicking
+                event.preventDefault(); 
+                // Avoid having the menu to close when clicking
+                event.stopPropagation(); 
+                // opening the one you clicked on
+                $(this).parent().toggleClass('open');
+            });
+        });
+        
+        // Konami Code
+        var press_1_one=false;var press_1_two=false;var press_1_three=false;var press_1_four=false;var press_1_five=false;var press_1_six=false;var press_1_seven=false;var press_1_eight=false;var press_1_nine=false;var press_1_ten=false;
+        
+        $(document).keydown(function(e){
+            if ( !press_1_one && e.keyCode == 38 ) { //Up Arrow
+            	press_1_one = true;
+            } else if (press_1_one && !press_1_two && e.keyCode == 38) { //Up Arrow
+            	press_1_two = true;
+            } else if (press_1_one && press_1_two && !press_1_three && e.keyCode == 40) { //Down Arrow
+            	press_1_three = true;
+            } else if (press_1_one && press_1_two && press_1_three && !press_1_four && e.keyCode == 40) { //Down Arrow
+            	press_1_four = true;
+            } else if (press_1_one && press_1_two && press_1_three && press_1_four && !press_1_five && e.keyCode == 37) { //Left Arrow
+            	press_1_five = true;
+            } else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && !press_1_six && e.keyCode == 39) { //Right Arrow
+            	press_1_six = true;
+            } else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && !press_1_seven && e.keyCode == 37) { //Left Arrow
+            	press_1_seven = true;
+            } else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && press_1_seven && !press_1_eight && e.keyCode == 39) { //Right Arrow
+            	press_1_eight = true;
+            } else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && press_1_seven && press_1_eight && !press_1_nine && e.keyCode == 66) { //B Key
+            	press_1_nine = true;
+            } else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && press_1_seven && press_1_eight && press_1_nine && !press_1_ten && e.keyCode == 65) { //A Key
+                press_1_ten = true;
+                window.alert('Secret');
+                console.log(press_1_one+' '+press_1_two+' '+press_1_three+' '+press_1_four+' '+press_1_five+' '+press_1_six+' '+press_1_seven+' '+press_1_eight+' '+press_1_nine+' '+press_1_ten);
+                press_1_one=false;press_1_two=false;press_1_three=false;press_1_four=false;press_1_five=false;press_1_six=false;press_1_seven=false;press_1_eight=false;press_1_nine=false;press_1_ten=false;
+            } else {
+                press_1_one=false;press_1_two=false;press_1_three=false;press_1_four=false;press_1_five=false;press_1_six=false;press_1_seven=false;press_1_eight=false;press_1_nine=false;press_1_ten=false;
+            }
+            console.log(press_1_one+' '+press_1_two+' '+press_1_three+' '+press_1_four+' '+press_1_five+' '+press_1_six+' '+press_1_seven+' '+press_1_eight+' '+press_1_nine+' '+press_1_ten);
+        });
+    </script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+
+</body>
+</html>
