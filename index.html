@@ -33,67 +33,70 @@
 		
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<button type="button" class="btn navbar-btn btn-success pull-left" onclick="reset();"><i class="fa fa-refresh"></i></button>
-			<form class="navbar-form navbar-left theme-change" role="search" onsubmit="themeUpdate();">
-				<label class="pull-left">Theme:</label>
-				<div class="form-group">
-					<select name="theme" class="theme form-control">
-						<option value="ambiance">Ambiance</option>
-						<option value="chaos">Chaos</option>
-						<option value="chrome">Chrome</option>
-						<option value="clouds_midnight">Clouds Midnight</option>
-						<option value="clouds">Clouds</option>
-						<option value="cobalt">Cobalt</option>
-						<option value="crimson_editor">Crimson Editor</option>
-						<option value="dawn">Dawn</option>
-						<option value="dreamweaver">Dreamweaver</option>
-						<option value="eclipse">Eclipse</option>
-						<option value="github">GitHub</option>
-						<option value="idle_fingers">Idle Fingers</option>
-						<option value="kr">KR</option>
-						<option value="katzenmilch">Katzenmilch</option>
-						<option value="kuroir">Kuroir</option>
-						<option value="merbivore_soft">Merbivore Soft</option>
-						<option value="merbivore">Merbivore</option>
-						<option value="mono_industrial">Mono Industrial</option>
-						<option value="monokai" selected>Monokai</option>
-						<option value="pastel_on_dark">Pastel On Dark</option>
-						<option value="solarized_dark">Solarized Dark</option>
-						<option value="solarized_light">Solarized Light</option>
-						<option value="terminal">Terminal</option>
-						<option value="textmate">Textmate</option>
-						<option value="tomorrow_night_blue">Tomorrow Night Blue</option>
-						<option value="tomorrow_night_bright">Tomorrow Night Bright</option>
-						<option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
-						<option value="tomorrow_night">Tomorrow Night</option>
-						<option value="tomorrow">Tomorrow</option>
-						<option value="twilight">Twilight</option>
-						<option value="vibrant_ink">Vibrant Ink</option>
-						<option value="xcode">Xcode</option>
-					</select>
-				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
+			<button type="button" class="btn navbar-btn btn-success pull-left" onclick="menuToggle();"><i class="fa fa-bars"></i> menu</button>
+			<button type="button" class="btn navbar-btn btn-success pull-left" onclick="reset();" style="margin-left: 10px;"><i class="fa fa-refresh"></i></button>
 			<div class="btn-group navbar-btn-group pull-right">
 				<button type="button" class="screen-ctrl btn all-code btn-primary navbar-btn"><i class="fa fa-fast-backward"></i></button>
 				<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
 				<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-fast-forward"></i></button>
 			</div>
-			<span class="version">v 1.2.1</span>
-			<div class="navbar-form form-inline fakeform">
-				<div class="form-group">
-					<input id="filename" class="form-control" type="text" val="" placeholder="filename">
-				</div>
-				<div class="form-group">
-					<label>.html</label>
-				</div>
-				<button type="submit" class="btn btn-info" onclick="download_html();">Download Your Code</button>
-			</div>
+			<span class="version">v 2.0.0</span>
 		</div><!-- /.navbar-collapse -->
 	</nav>
 	
-	<div class="content">
-		<div class="content-code" class="content-section">
+	<div class="editor-menu">
+	<div class="menu-container">
+
+		<label class="pull-left">Theme:</label>
+		<div class="form-group">
+			<select name="theme" class="theme form-control">
+				<option value="ambiance">Ambiance</option>
+				<option value="chaos">Chaos</option>
+				<option value="chrome">Chrome</option>
+				<option value="clouds_midnight">Clouds Midnight</option>
+				<option value="clouds">Clouds</option>
+				<option value="cobalt">Cobalt</option>
+				<option value="crimson_editor">Crimson Editor</option>
+				<option value="dawn">Dawn</option>
+				<option value="dreamweaver">Dreamweaver</option>
+				<option value="eclipse">Eclipse</option>
+				<option value="github">GitHub</option>
+				<option value="idle_fingers">Idle Fingers</option>
+				<option value="kr">KR</option>
+				<option value="katzenmilch">Katzenmilch</option>
+				<option value="kuroir">Kuroir</option>
+				<option value="merbivore_soft">Merbivore Soft</option>
+				<option value="merbivore">Merbivore</option>
+				<option value="mono_industrial">Mono Industrial</option>
+				<option value="monokai" selected>Monokai</option>
+				<option value="pastel_on_dark">Pastel On Dark</option>
+				<option value="solarized_dark">Solarized Dark</option>
+				<option value="solarized_light">Solarized Light</option>
+				<option value="terminal">Terminal</option>
+				<option value="textmate">Textmate</option>
+				<option value="tomorrow_night_blue">Tomorrow Night Blue</option>
+				<option value="tomorrow_night_bright">Tomorrow Night Bright</option>
+				<option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
+				<option value="tomorrow_night">Tomorrow Night</option>
+				<option value="tomorrow">Tomorrow</option>
+				<option value="twilight">Twilight</option>
+				<option value="vibrant_ink">Vibrant Ink</option>
+				<option value="xcode">Xcode</option>
+			</select>
+		</div>
+		
+		<label class="pull-left">Download Your Code</label>
+		<div class="form-group">
+			<input id="filename" class="form-control" type="text" val="" placeholder="filename">
+		</div>
+		<button type="submit" class="btn btn-info" onclick="download_html();"><i class="fa fa-download"></i> Download</button>
+	
+	</div>
+	</div>
+	
+	<div class="content-section">
+		<div class="content">
+			<div class="content-code">
 				
 <div id="editor">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -245,11 +248,12 @@
 &lt;/body&gt;
 &lt;/html&gt;</div>	
 		
+			</div>
 		</div>
-	</div>
-	
-	<div class="preview-pane">
-		<iframe name="preview" id="preview" src=""></iframe>
+		
+		<div class="preview-pane">
+			<iframe name="preview" id="preview" src=""></iframe>
+		</div>
 	</div>
 </div>
 

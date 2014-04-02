@@ -29,11 +29,25 @@ $(document).ready(function() {
 		$(this).addClass('btn-warning');
 	});
 	
-	$(".theme-change").submit(function(event){
-		event.preventDefault();
+	$("select[name=theme]").change(function(){
+		themeUpdate();
 	});
 	
 });
+
+function menuToggle() {
+	if ( $('.editor-menu').hasClass('open') ) {
+		$('.editor-menu').css('width', '0%');
+		$('.content-section').css('width','100%');
+		$('.content-section').css('left', '0%');
+		$('.editor-menu').removeClass('open');
+	}else{
+		$('.editor-menu').css('width', '20%');
+		$('.content-section').css('width', '80%');
+		$('.content-section').css('left', '20%');
+		$('.editor-menu').addClass('open');
+	}
+}
 
 function reset() {
 	$('#preview').remove();
@@ -69,10 +83,16 @@ function download_html() {
 		var name = filename
 	}else{
 		var name = new Date().getTime();
+		name = name.toString();
 	}
 	var iframeDoc = document.getElementById('preview').contentWindow.document.documentElement.innerHTML;
 	var html_code = "<!DOCTYPE html>\n<html>\n" + iframeDoc + "\n</html>"
 	console.log(html_code);
-	download(name+".html", html_code);
+	
+	if ( name.indexOf('.html') == -1 ) {
+		name = name + ".html";
+	}
+	
+	download(name, html_code);
 	return false;
 }
