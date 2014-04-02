@@ -36,8 +36,8 @@ $(document).ready(function() {
 	
 	$("select[name=font-size]").change(function(){
 		var font_size = $("select[name=font-size] option:selected").val();
-		console.log(font_size);
-		editor.setFontSize(font_size);
+		//editor.setFontSize(font_size);
+		document.getElementById('editor').style.fontSize=font_size+'px';
 	});
 	
 	$("select[name=tab-size]").change(function(){
@@ -48,6 +48,28 @@ $(document).ready(function() {
 	$("input[name=showInvisibles]").change(function(){
 		editor.setShowInvisibles($(this).is(":checked"));
 	});
+	
+	$("select[name=wrap]").change(function(){
+		var session = editor.session;
+	    var renderer = editor.renderer;
+	    var value = $("select[name=wrap] option:selected").val();
+	    switch (value) {
+	        case "off":
+	            session.setUseWrapMode(false);
+	            renderer.setPrintMarginColumn(80);
+	            break;
+	        case "free":
+	            session.setUseWrapMode(true);
+	            session.setWrapLimitRange(null, null);
+	            renderer.setPrintMarginColumn(80);
+	            break;
+	        default:
+	            session.setUseWrapMode(true);
+	            var col = parseInt(value, 10);
+	            session.setWrapLimitRange(col, col);
+	            renderer.setPrintMarginColumn(col);
+	    }
+    });
 	
 });
 
