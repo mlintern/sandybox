@@ -33,61 +33,91 @@
 		
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<button type="button" class="btn navbar-btn btn-success pull-left" onclick="menuToggle();"><i class="fa fa-bars"></i> menu</button>
+			<button type="button" class="btn navbar-btn btn-success pull-left" onclick="menuToggle();"><i class="fa fa-bars"></i> Menu</button>
 			<button type="button" class="btn navbar-btn btn-success pull-left" onclick="reset();" style="margin-left: 10px;"><i class="fa fa-refresh"></i></button>
 			<div class="btn-group navbar-btn-group pull-right">
 				<button type="button" class="screen-ctrl btn all-code btn-primary navbar-btn"><i class="fa fa-fast-backward"></i></button>
 				<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
 				<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-fast-forward"></i></button>
 			</div>
-			<span class="version">v 2.0.0</span>
+			<span class="version">v 2.3.0</span>
 		</div><!-- /.navbar-collapse -->
 	</nav>
 	
 	<div class="editor-menu">
-	<div class="menu-container">
+	<div class="menu-container form-horizontal">
 
-		<label class="pull-left">Theme:</label>
+		
 		<div class="form-group">
-			<select name="theme" class="theme form-control">
-				<option value="ambiance">Ambiance</option>
-				<option value="chaos">Chaos</option>
-				<option value="chrome">Chrome</option>
-				<option value="clouds_midnight">Clouds Midnight</option>
-				<option value="clouds">Clouds</option>
-				<option value="cobalt">Cobalt</option>
-				<option value="crimson_editor">Crimson Editor</option>
-				<option value="dawn">Dawn</option>
-				<option value="dreamweaver">Dreamweaver</option>
-				<option value="eclipse">Eclipse</option>
-				<option value="github">GitHub</option>
-				<option value="idle_fingers">Idle Fingers</option>
-				<option value="kr">KR</option>
-				<option value="katzenmilch">Katzenmilch</option>
-				<option value="kuroir">Kuroir</option>
-				<option value="merbivore_soft">Merbivore Soft</option>
-				<option value="merbivore">Merbivore</option>
-				<option value="mono_industrial">Mono Industrial</option>
-				<option value="monokai" selected>Monokai</option>
-				<option value="pastel_on_dark">Pastel On Dark</option>
-				<option value="solarized_dark">Solarized Dark</option>
-				<option value="solarized_light">Solarized Light</option>
-				<option value="terminal">Terminal</option>
-				<option value="textmate">Textmate</option>
-				<option value="tomorrow_night_blue">Tomorrow Night Blue</option>
-				<option value="tomorrow_night_bright">Tomorrow Night Bright</option>
-				<option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
-				<option value="tomorrow_night">Tomorrow Night</option>
-				<option value="tomorrow">Tomorrow</option>
-				<option value="twilight">Twilight</option>
-				<option value="vibrant_ink">Vibrant Ink</option>
-				<option value="xcode">Xcode</option>
-			</select>
+			<label class="col-sm-4 control-label">Theme:</label>
+			<div class="col-sm-8">
+				<select name="theme" class="theme form-control">
+					<option value="ambiance">Ambiance</option>
+					<option value="chaos">Chaos</option>
+					<option value="chrome">Chrome</option>
+					<option value="clouds_midnight">Clouds Midnight</option>
+					<option value="clouds">Clouds</option>
+					<option value="cobalt">Cobalt</option>
+					<option value="crimson_editor">Crimson Editor</option>
+					<option value="dawn">Dawn</option>
+					<option value="dreamweaver">Dreamweaver</option>
+					<option value="eclipse">Eclipse</option>
+					<option value="github">GitHub</option>
+					<option value="idle_fingers">Idle Fingers</option>
+					<option value="kr">KR</option>
+					<option value="katzenmilch">Katzenmilch</option>
+					<option value="kuroir">Kuroir</option>
+					<option value="merbivore_soft">Merbivore Soft</option>
+					<option value="merbivore">Merbivore</option>
+					<option value="mono_industrial">Mono Industrial</option>
+					<option value="monokai" selected>Monokai</option>
+					<option value="pastel_on_dark">Pastel On Dark</option>
+					<option value="solarized_dark">Solarized Dark</option>
+					<option value="solarized_light">Solarized Light</option>
+					<option value="terminal">Terminal</option>
+					<option value="textmate">Textmate</option>
+					<option value="tomorrow_night_blue">Tomorrow Night Blue</option>
+					<option value="tomorrow_night_bright">Tomorrow Night Bright</option>
+					<option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
+					<option value="tomorrow_night">Tomorrow Night</option>
+					<option value="tomorrow">Tomorrow</option>
+					<option value="twilight">Twilight</option>
+					<option value="vibrant_ink">Vibrant Ink</option>
+					<option value="xcode">Xcode</option>
+				</select>
+			</div>
 		</div>
 		
-		<label class="pull-left">Download Your Code</label>
+
+		
 		<div class="form-group">
-			<input id="filename" class="form-control" type="text" val="" placeholder="filename">
+			<label class="col-sm-4 control-label">Tab:</label>
+			<div class="col-sm-8">
+				<select name="tab-size" class="form-control">
+					<option value="1">1 space</option>
+					<option value="2" selected>2 space</option>
+					<option value="3">3 space</option>
+					<option value="4">4 space</option>
+					<option value="5">5 space</option>
+					<option value="6">6 space</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="col-sm-12">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="showInvisibles"> Show Invisibles
+					</label>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<label class="col-sm-12">Download Your Code</label>
+			<div class="col-sm-12"><input id="filename" class="form-control" type="text" val="" placeholder="filename"></div>
 		</div>
 		<button type="submit" class="btn btn-info" onclick="download_html();"><i class="fa fa-download"></i> Download</button>
 	
@@ -111,19 +141,19 @@
     &lt;link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"&gt;
     &lt;link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;
 	&lt;style&gt;
-        .black:focus{outline-color:black;}
-        .red:focus{outline-color:#d9534f;}
-        .blue:focus{outline-color:#428bca;}
-        .orange:focus{outline-color:#f0ad4e;}
-        .green:focus{outline-color:#5cb85c;}
-        .aqua:focus{outline-color:#5bc0de;}
-        /*SubMenu*/
-        .dropdown-submenu{position:relative;}
-        .dropdown-submenu&gt;.dropdown-menu{top:0;left:100%;margin-top:0px;margin-left:5px;}
-        /*.dropdown-submenu:hover&gt;.dropdown-menu{display:block;}*/
-        .dropdown-submenu.pull-left{float:none!important;}
-        .dropdown-submenu.pull-left&gt;.dropdown-menu{left:-111%;margin-left:10px;}
-        .fa.fa-caret-right{top: 3px;position: relative;}
+		.black:focus{outline-color:black;}
+		.red:focus{outline-color:#d9534f;}
+		.blue:focus{outline-color:#428bca;}
+		.orange:focus{outline-color:#f0ad4e;}
+		.green:focus{outline-color:#5cb85c;}
+		.aqua:focus{outline-color:#5bc0de;}
+		/*SubMenu*/
+		.dropdown-submenu{position:relative;}
+		.dropdown-submenu&gt;.dropdown-menu{top:0;left:100%;margin-top:0px;margin-left:5px;}
+		/*.dropdown-submenu:hover&gt;.dropdown-menu{display:block;}*/
+		.dropdown-submenu.pull-left{float:none!important;}
+		.dropdown-submenu.pull-left&gt;.dropdown-menu{left:-111%;margin-left:10px;}
+		.fa.fa-caret-right{top: 3px;position: relative;}
 	&lt;/style&gt;
 &lt;/head&gt;
 &lt;body style=""&gt;
@@ -264,7 +294,7 @@
 var editor = ace.edit("editor");
 editor.setTheme("ace/theme/monokai");
 editor.getSession().setMode("ace/mode/html");
-editor.getSession().setTabSize(4);
+editor.getSession().setTabSize(2);
 </script>
 
 </body>

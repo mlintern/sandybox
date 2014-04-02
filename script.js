@@ -30,7 +30,23 @@ $(document).ready(function() {
 	});
 	
 	$("select[name=theme]").change(function(){
-		themeUpdate();
+		var theme = $("select[name=theme] option:selected").val();
+		editor.setTheme("ace/theme/"+theme);
+	});
+	
+	$("select[name=font-size]").change(function(){
+		var font_size = $("select[name=font-size] option:selected").val();
+		console.log(font_size);
+		editor.setFontSize(font_size);
+	});
+	
+	$("select[name=tab-size]").change(function(){
+		var tab_size = $("select[name=tab-size] option:selected").val();
+		editor.getSession().setTabSize(tab_size);
+	});
+	
+	$("input[name=showInvisibles]").change(function(){
+		editor.setShowInvisibles($(this).is(":checked"));
 	});
 	
 });
@@ -58,15 +74,6 @@ function reset() {
 function runCode() {
 	window['preview'].document.write(editor.getValue());
 	window['preview'].document.close();
-}
-
-function themeUpdate() {
-	var theme = $("select[name=theme] option:selected").val();
-	console.log(theme);
-	
-	editor.setTheme("ace/theme/"+theme);
-	
-	return false;
 }
 
 function download(filename, text) {
