@@ -36,7 +36,6 @@ $(document).ready(function() {
 	
 	$("select[name=font-size]").change(function(){
 		var font_size = $("select[name=font-size] option:selected").val();
-		//editor.setFontSize(font_size);
 		document.getElementById('editor').style.fontSize=font_size+'px';
 	});
 	
@@ -75,14 +74,12 @@ $(document).ready(function() {
 
 function menuToggle() {
 	if ( $('.editor-menu').hasClass('open') ) {
-		$('.editor-menu').css('width', '0%');
-		$('.content-section').css('width','100%');
-		$('.content-section').css('left', '0%');
+		$('.editor-menu').animate({width:'0%'});
+		$('.content-section').animate({width:'100%',left:'0%'});
 		$('.editor-menu').removeClass('open');
 	}else{
-		$('.editor-menu').css('width', '20%');
-		$('.content-section').css('width', '80%');
-		$('.content-section').css('left', '20%');
+		$('.content-section').animate({width:'80%',left:'20%'});
+		$('.editor-menu').animate({width:'20%'});
 		$('.editor-menu').addClass('open');
 	}
 }
