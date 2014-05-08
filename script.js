@@ -87,7 +87,11 @@ function menuToggle() {
 function reset() {
 	$('#preview').remove();
 	$('.preview-pane').append('<iframe name="preview" id="preview" src=""></iframe>');
-	runCode();
+	$('.fa.fa-refresh').addClass('fa-spin');
+	setTimeout(function(){
+		runCode();
+		$('.fa.fa-refresh').removeClass('fa-spin');
+	}, 875)
 }
 
 function runCode() {
