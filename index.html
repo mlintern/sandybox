@@ -20,7 +20,7 @@
 <body class="r-fog90">
 
 <div id="container">
-	<nav class="navbar navbar-default navbar-auto-hide navbar-fixed-top r-fog90" role="navigation">
+	<nav class="navbar navbar-default r-fog90" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -41,7 +41,7 @@
 				<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
 				<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-list-alt"></i></button>
 			</div>
-			<span class="version">v 2.7.0</span>
+			<span class="version">v 2.7.1</span>
 		</div><!-- /.navbar-collapse -->
 	</nav>
 	
@@ -136,6 +136,16 @@
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" name="showInvisibles"> Show Invisibles
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-12">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="autoHide"> Auto Hide Navbar
 					</label>
 				</div>
 			</div>
@@ -327,7 +337,6 @@ editor.getSession().setTabSize(2);
 
 <script>
 $(".chosen-select").chosen({width: "100%"});
-$(".navbar-auto-hide").autoHide({show_height: 3,delay: 1000,slide_speed: 100});
 </script>
 
 </body>
