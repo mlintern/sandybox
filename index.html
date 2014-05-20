@@ -20,7 +20,7 @@
 <body class="r-fog90">
 
 <div id="container">
-	<nav class="navbar navbar-default r-fog90" role="navigation">
+	<nav class="navbar navbar-default navbar-auto-hide navbar-fixed-top r-fog90" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -41,7 +41,7 @@
 				<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
 				<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-list-alt"></i></button>
 			</div>
-			<span class="version">v 2.6.2</span>
+			<span class="version">v 2.7.0</span>
 		</div><!-- /.navbar-collapse -->
 	</nav>
 	
@@ -316,6 +316,7 @@
 <script src="http://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js"></script>
 <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="script.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js"></script>
 
 <script>
 var editor = ace.edit("editor");
@@ -324,7 +325,10 @@ editor.getSession().setMode("ace/mode/html");
 editor.getSession().setTabSize(2);
 </script>
 
-<script>$(".chosen-select").chosen({width: "100%"})</script>
+<script>
+$(".chosen-select").chosen({width: "100%"});
+$(".navbar-auto-hide").autoHide({show_height: 3,delay: 1000,slide_speed: 100});
+</script>
 
 </body>
 </html>

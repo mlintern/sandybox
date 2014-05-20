@@ -1,27 +1,94 @@
-body { background-color: #fff; cursor: default; margin: 0; padding: 0; }
+body { 
+	background-color: #fff; 
+	cursor: default; 
+	margin: 0; 
+	padding: 0; 
+}
 
-#container { overflow: hidden; }
+#container { 
+	overflow: hidden;
+}
 
-.content-section { height: 90%; overflow: scroll; width: 100%; left: 0%; position: absolute; }
+.content-section { 
+	height: 98%; 
+	overflow: scroll; 
+	width: 100%; 
+	left: 0%; 
+	position: absolute; 
+	top: 5px;
+}
 
-.content { width: 40%; height: 100%; position: absolute; border-bottom: 2px solid #193878; }
+.content { 
+	width: 40%; 
+	height: 100%; 
+	position: absolute; 
+	border-bottom: 2px solid #193878; 
+}
 
-.preview-pane { width: 60%; height: 100%; position: absolute; left: 40%; border-bottom: 2px solid #193878;background-color: #FFF; }
-.preview-pane iframe { width: 100%; height: 100%; border: 0; }
+.preview-pane { 
+	width: 60%; 
+	height: 100%; 
+	position: absolute; 
+	left: 40%; 
+	border-bottom: 2px solid #193878;
+	background-color: #FFF; 
+}
+.preview-pane iframe { 
+	width: 100%; 
+	height: 100%; 
+	border: 0; }
 
-#editor { position: absolute; width: 100%; height: 100%; }
+#editor { 
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+}
 
-.editor-menu { background-color: #fff; width: 0%; height: 90%; position: absolute; left: 0; border-right: 2px solid #000;}
-.menu-container { padding: 20px; }
+.editor-menu { 
+	background-color: #fff; 
+	width: 0%; 
+	height: 98%; 
+	position: absolute; 
+	left: 0; 
+	border-right: 2px solid #000;
+	top: 5px;
+}
+.menu-container { 
+	padding: 70px 20px 20px 20px; 
+}
 
-.navbar { margin-bottom: 0; }
+.navbar { 
+	margin-bottom: 0; 
+}
 
-.navbar-default { background-color: #f8f8f8;border-color: #e7e7e7;border: none;border-bottom: solid 2px #FFF; border-radius: 0;}
+.navbar-default { 
+	background-color: #f8f8f8;
+	border-color: #e7e7e7;
+	border: none;
+	border-bottom: solid 2px #FFF; 
+	border-radius: 0;
+}
 
-.navbar-default .navbar-brand { color: #FFF; }
+.navbar-default .navbar-brand { 
+	color: #FFF; 
+}
 
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { color: #FFF;background-color: transparent; }
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { 
+	color: #FFF;
+	background-color: transparent; 
+}
 
-.navbar label { font-size: 18px;color: #FFF;padding-right: 10px;padding-top: 3px;font-weight: 400; }
+.navbar label { 
+	font-size: 18px;
+	color: #FFF;
+	padding-right: 10px;
+	padding-top: 3px;
+	font-weight: 400; 
+}
 
-.version{ color: #FFF;float: right;display: inline-block;padding: 15px; }
+.version{ 
+	color: #FFF;
+	float: right;
+	display: inline-block;
+	padding: 15px; 
+}
