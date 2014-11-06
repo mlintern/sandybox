@@ -291,36 +291,30 @@
 		});
 		
 		// Konami Code
-		var press_1_one=false;var press_1_two=false;var press_1_three=false;var press_1_four=false;var press_1_five=false;var press_1_six=false;var press_1_seven=false;var press_1_eight=false;var press_1_nine=false;var press_1_ten=false;
-		
-		$(document).keydown(function(e){
-			if ( !press_1_one && e.keyCode == 38 ) { //Up Arrow
-				press_1_one = true;
-			} else if (press_1_one && !press_1_two && e.keyCode == 38) { //Up Arrow
-				press_1_two = true;
-			} else if (press_1_one && press_1_two && !press_1_three && e.keyCode == 40) { //Down Arrow
-				press_1_three = true;
-			} else if (press_1_one && press_1_two && press_1_three && !press_1_four && e.keyCode == 40) { //Down Arrow
-				press_1_four = true;
-			} else if (press_1_one && press_1_two && press_1_three && press_1_four && !press_1_five && e.keyCode == 37) { //Left Arrow
-				press_1_five = true;
-			} else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && !press_1_six && e.keyCode == 39) { //Right Arrow
-				press_1_six = true;
-			} else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && !press_1_seven && e.keyCode == 37) { //Left Arrow
-				press_1_seven = true;
-			} else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && press_1_seven && !press_1_eight && e.keyCode == 39) { //Right Arrow
-				press_1_eight = true;
-			} else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && press_1_seven && press_1_eight && !press_1_nine && e.keyCode == 66) { //B Key
-				press_1_nine = true;
-			} else if (press_1_one && press_1_two && press_1_three && press_1_four && press_1_five && press_1_six && press_1_seven && press_1_eight && press_1_nine && !press_1_ten && e.keyCode == 65) { //A Key
-				press_1_ten = true;
-				window.alert('Secret');
-				console.log(press_1_one+' '+press_1_two+' '+press_1_three+' '+press_1_four+' '+press_1_five+' '+press_1_six+' '+press_1_seven+' '+press_1_eight+' '+press_1_nine+' '+press_1_ten);
-				press_1_one=false;press_1_two=false;press_1_three=false;press_1_four=false;press_1_five=false;press_1_six=false;press_1_seven=false;press_1_eight=false;press_1_nine=false;press_1_ten=false;
-			} else {
-				press_1_one=false;press_1_two=false;press_1_three=false;press_1_four=false;press_1_five=false;press_1_six=false;press_1_seven=false;press_1_eight=false;press_1_nine=false;press_1_ten=false;
-			}
-			console.log(press_1_one+' '+press_1_two+' '+press_1_three+' '+press_1_four+' '+press_1_five+' '+press_1_six+' '+press_1_seven+' '+press_1_eight+' '+press_1_nine+' '+press_1_ten);
+		var up = {code:38,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
+		var down = {code:40,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-down fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
+		var right = {code:39,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
+		var left = {code:37,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-left fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
+		var a = {code:65,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;'};
+		var b = {code:66,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;'};
+
+    var sequence = [up,up,down,down,left,right,left,right,b,a];
+    var current = 0;
+
+    $(document).keydown(function(e){
+      if ( e.keyCode == sequence[current].code ) {
+        current++;
+        if ( current == sequence.length ) {
+          alert('Secret'); 
+          current = 0;
+          $('.current-btn').html(sequence[0].show);
+        } else {
+          $('.current-btn').html(sequence[current].show);
+        }
+      }else{
+        current = 0;
+        $('.current-btn').html(sequence[0].show);
+      }
 		});
 	&lt;/script&gt;
 
