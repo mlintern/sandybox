@@ -138,15 +138,19 @@
       if ( e.keyCode == sequence[current].code ) {
         current++;
         if ( current == sequence.length ) {
+          $("span.fa-stack:nth-child("+current+")").css("color","orange")
           alert('Secret'); 
           current = 0;
           $('.current-btn').html(sequence[0].show);
+          $("span.fa-stack").removeAttr("style");
         } else {
           $('.current-btn').html(sequence[current].show);
+          $("span.fa-stack:nth-child("+current+")").css("color","orange")
         }
       }else{
         current = 0;
         $('.current-btn').html(sequence[0].show);
+        $("span.fa-stack").removeAttr("style");
       }
         });
     </script>
