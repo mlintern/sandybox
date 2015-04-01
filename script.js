@@ -3,10 +3,11 @@ $(document).ready(function() {
 	setTimeout(function(){runCode();},1000)
 	
 	editor.getSession().on('change', function(e) {
-    	runCode();
+		runCode();
 	});
 	
 	$('.all-code').bind('click', function() {
+		updateWrap();
 		$('.preview-pane').css('width','0%');
 		$('.content').css('width','100%');
 		$('.screen-ctrl').removeClass('btn-warning');
@@ -14,6 +15,7 @@ $(document).ready(function() {
 	});
 	
 	$('.split').bind('click', function() {
+		updateWrap();
 		$('.preview-pane').css('width','60%');
 		$('.preview-pane').css('left','40%');
 		$('.content').css('width','40%');
@@ -47,30 +49,12 @@ $(document).ready(function() {
 	$("input[name=showInvisibles]").change(function(){
 		editor.setShowInvisibles($(this).is(":checked"));
 	});
-	
-	$("select[name=wrap]").change(function(){
-		var session = editor.session;
-	    var renderer = editor.renderer;
-	    var value = $("select[name=wrap] option:selected").val();
-	    switch (value) {
-	        case "off":
-	            session.setUseWrapMode(false);
-	            renderer.setPrintMarginColumn(80);
-	            break;
-	        case "free":
-	            session.setUseWrapMode(true);
-	            session.setWrapLimitRange(null, null);
-	            renderer.setPrintMarginColumn(80);
-	            break;
-	        default:
-	            session.setUseWrapMode(true);
-	            var col = parseInt(value, 10);
-	            session.setWrapLimitRange(col, col);
-	            renderer.setPrintMarginColumn(col);
-	    }
-    });
 
-    $("input[name=autoHide]").change(function(){
+	$("select[name=wrap]").change(function(){
+		updateWrap();
+	});
+
+	$("input[name=autoHide]").change(function(){
 		if ($(this).is(":checked")){
 			$('.navbar').addClass('navbar-auto-hide navbar-fixed-top');
 			$('.content-section').addClass('tall');
@@ -86,6 +70,29 @@ $(document).ready(function() {
 	});
 	
 });
+
+function updateWrap () {
+	var session = editor.session;
+	var renderer = editor.renderer;
+	var value = $("select[name=wrap] option:selected").val();
+	switch (value) {
+		case "off":
+			session.setUseWrapMode(false);
+			renderer.setShowPrintMargin(false);
+			break;
+		case "free":
+			session.setUseWrapMode(true);
+			session.setWrapLimitRange(null, null);
+			renderer.setShowPrintMargin(false);
+			break;
+		default:
+			session.setUseWrapMode(true);
+			var col = parseInt(value, 10);
+			session.setWrapLimitRange(col, col);
+			renderer.setPrintMarginColumn(col);
+			break;
+	}
+}
 
 function menuToggle() {
 	if ( $('.editor-menu').hasClass('open') ) {
@@ -106,7 +113,7 @@ function reset() {
 	setTimeout(function(){
 		runCode();
 		$('.fa.fa-refresh').removeClass('fa-spin');
-	}, 875)
+	}, 500)
 }
 
 function runCode() {
@@ -115,10 +122,10 @@ function runCode() {
 }
 
 function download(filename, text) {
-    var pom = document.createElement('a');
-    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    pom.setAttribute('download', filename);
-    pom.click();
+	var pom = document.createElement('a');
+	pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+	pom.setAttribute('download', filename);
+	pom.click();
 }
 
 function download_html() {
@@ -139,5 +146,5 @@ function download_html() {
 	}
 	
 	download(name, html_code);
-	return false;
+	return true;
 }
