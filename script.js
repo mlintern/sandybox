@@ -7,20 +7,20 @@ $(document).ready(function() {
 	});
 	
 	$('.all-code').bind('click', function() {
-		updateWrap();
 		$('.preview-pane').css('width','0%');
 		$('.content').css('width','100%');
 		$('.screen-ctrl').removeClass('btn-warning');
 		$(this).addClass('btn-warning');
+		updateWrap();
 	});
 	
 	$('.split').bind('click', function() {
-		updateWrap();
 		$('.preview-pane').css('width','60%');
 		$('.preview-pane').css('left','40%');
 		$('.content').css('width','40%');
 		$('.screen-ctrl').removeClass('btn-warning');
 		$(this).addClass('btn-warning');
+		updateWrap();
 	});
 	
 	$('.all-display').bind('click', function() {
@@ -71,13 +71,15 @@ $(document).ready(function() {
 	
 });
 
-function updateWrap () {
-	var session = editor.session;
+function updateWrap() {
+	var session = editor.getSession();
 	var renderer = editor.renderer;
 	var value = $("select[name=wrap] option:selected").val();
+	console.log(value);
 	switch (value) {
 		case "off":
 			session.setUseWrapMode(false);
+			session.setWrapLimitRange(null, null);
 			renderer.setShowPrintMargin(false);
 			break;
 		case "free":
