@@ -75,7 +75,6 @@ function updateWrap() {
 	var session = editor.getSession();
 	var renderer = editor.renderer;
 	var value = $("select[name=wrap] option:selected").val();
-	console.log(value);
 	switch (value) {
 		case "off":
 			session.setUseWrapMode(false);
