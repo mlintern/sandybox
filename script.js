@@ -130,7 +130,6 @@ function download(filename, text) {
 }
 
 function download_html() {
-	console.log('here');
 	var filename = $('#filename').val();
 	if (filename.length > 0) {
 		var name = filename
@@ -140,7 +139,6 @@ function download_html() {
 	}
 	var iframeDoc = document.getElementById('preview').contentWindow.document.documentElement.innerHTML;
 	var html_code = "<!DOCTYPE html>\n<html>\n" + iframeDoc + "\n</html>"
-	console.log(html_code);
 	
 	if ( name.indexOf('.html') == -1 ) {
 		name = name + ".html";
