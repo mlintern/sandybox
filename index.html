@@ -14,7 +14,7 @@
 
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.12.1.min.js" type="text/javascript"></script>
 
 </head>
 <body class="r-fog90">
@@ -31,24 +31,22 @@
 			</button>
 			<a class="navbar-brand">SandyBox</a>
 		</div>
-		
+
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<button type="button" class="btn navbar-btn btn-success pull-left" onclick="menuToggle();"><i class="fa fa-bars"></i> Menu</button>
-			<button type="button" class="btn navbar-btn btn-success pull-left" onclick="reset();" style="margin-left: 10px;"><i class="fa fa-refresh"></i></button>
+			<button type="button" class="menuToggle btn navbar-btn btn-success pull-left"><i class="fa fa-bars"></i> Menu</button>
+			<button type="button" class="reset btn navbar-btn btn-success pull-left" style="margin-left: 10px;"><i class="fa fa-refresh"></i></button>
 			<div class="btn-group navbar-btn-group pull-right">
 				<button type="button" class="screen-ctrl btn all-code btn-primary navbar-btn"><i class="fa fa-terminal"></i></button>
 				<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
 				<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-list-alt"></i></button>
 			</div>
-			<span class="version">v 2.7.2</span>
+			<span class="version">v 2.8.0</span>
 		</div><!-- /.navbar-collapse -->
 	</nav>
-	
-	<div class="editor-menu">
-	<div class="menu-container form-horizontal">
 
-		
+	<div class="editor-menu menu-container form-horizontal">
+
 		<div class="form-group">
 			<label class="col-sm-4 x-control-label">Theme:</label>
 			<div class="col-sm-8">
@@ -90,7 +88,7 @@
 				</select>
 			</div>
 		</div>
-		
+
 		<div class="form-group">
 			<label class="col-sm-4 x-control-label">Font:</label>
 			<div class="col-sm-8">
@@ -106,7 +104,7 @@
 				</select>
 			</div>
 		</div>
-		
+
 		<div class="form-group">
 			<label class="col-sm-4 x-control-label">Wrap:</label>
 			<div class="col-sm-8">
@@ -132,7 +130,7 @@
 				</select>
 			</div>
 		</div>
-		
+
 		<div class="form-group">
 			<div class="col-sm-12">
 				<div class="checkbox">
@@ -152,17 +150,15 @@
 				</div>
 			</div>
 		</div>
-		
-		
+
 		<div class="form-group">
 			<label class="col-sm-12">Download Your Code</label>
 			<div class="col-sm-12"><input id="filename" class="form-control" type="text" val="" placeholder="filename"></div>
 		</div>
 		<button type="submit" class="btn btn-info" onclick="download_html();"><i class="fa fa-download"></i> Download</button>
-	
+
 	</div>
-	</div>
-	
+
 	<div class="content-section">
 		<div class="content">
 			<div class="content-code">
@@ -173,23 +169,24 @@
 	&lt;title&gt;Website Title&lt;/title&gt;
 	&lt;meta charset="UTF-8"&gt;
 	
-	&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"&gt;&lt;/script&gt;
 	
 	&lt;!-- Latest compiled and minified Bootstrap CSS --&gt;
-	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"&gt;
+	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;
 
 	&lt;!-- Optional Bootstrap theme --&gt;
-	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"&gt;
+	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"&gt;
 
 	&lt;!-- Font Awesome--&gt;
-	&lt;link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet"&gt;
+	&lt;link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet"&gt;
 	&lt;style&gt;
-		.black:focus{outline-color:black;}
+		.black:focus{outline-color:#000000;}
 		.red:focus{outline-color:#d9534f;}
 		.blue:focus{outline-color:#428bca;}
 		.orange:focus{outline-color:#f0ad4e;}
 		.green:focus{outline-color:#5cb85c;}
 		.aqua:focus{outline-color:#5bc0de;}
+		.fa strong {Font-Family: Arial;}
 		/*SubMenu*/
 		.dropdown-submenu{position:relative;}
 		.dropdown-submenu&gt;.dropdown-menu{top:0;left:100%;margin-top:0px;margin-left:5px;}
@@ -221,14 +218,17 @@
 							&lt;ul class="dropdown-menu"&gt;
 								&lt;li class="menu-item "&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
 								&lt;li class="menu-item "&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
-								&lt;li class="menu-item dropdown dropdown-submenu"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Third Level &lt;i class="fa fa-caret-right pull-right"&gt;&lt;/i&gt;&lt;/a&gt;
+								&lt;li class="menu-item "&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
+								&lt;li class="menu-item "&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
+								&lt;li class="menu-item dropdown dropdown-submenu pull-left"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Third Level &lt;i class="fa fa-caret-right pull-right"&gt;&lt;/i&gt;&lt;/a&gt;
 									&lt;ul class="dropdown-menu"&gt;
 										&lt;li&gt;&lt;a href="#"&gt;Fourth Level&lt;/a&gt;&lt;/li&gt;
 										&lt;li&gt;&lt;a href="#"&gt;Fourth Level&lt;/a&gt;&lt;/li&gt;
 										&lt;li&gt;&lt;a href="#"&gt;Fourth Level&lt;/a&gt;&lt;/li&gt;
 										&lt;li&gt;&lt;a href="#"&gt;Fourth Level&lt;/a&gt;&lt;/li&gt;
-										&lt;li class="menu-item dropdown dropdown-submenu pull-left"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Fourth Level &lt;i class="fa fa-caret-right pull-right"&gt;&lt;/i&gt;&lt;/a&gt;
+										&lt;li class="menu-item dropdown dropdown-submenu"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Fourth Level &lt;i class="fa fa-caret-right pull-right"&gt;&lt;/i&gt;&lt;/a&gt;
 											&lt;ul class="dropdown-menu"&gt;
+												&lt;li&gt;&lt;a href="#"&gt;Fifth Level&lt;/a&gt;&lt;/li&gt;
 												&lt;li&gt;&lt;a href="#"&gt;Fifth Level&lt;/a&gt;&lt;/li&gt;
 											&lt;/ul&gt;
 										&lt;/li&gt;
@@ -242,7 +242,7 @@
 				&lt;li class="menu-item"&gt;&lt;a href="#"&gt;First Level&lt;/a&gt;&lt;/li&gt;
 			&lt;/ul&gt;
 			&lt;div class="pull-right"&gt;
-				&lt;button data-color="black" class="navbar-btn btn btn-default body-color-change"&gt;Default&lt;/button&gt;
+				&lt;button data-color="#000000" class="black navbar-btn btn btn-default body-color-change"&gt;Default&lt;/button&gt;
 				&lt;button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"&gt; &lt;/button&gt;
 				&lt;button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"&gt; &lt;/button&gt;
 				&lt;button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change"&gt; &lt;/button&gt;
@@ -267,8 +267,8 @@
 			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
 			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-left fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
 			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;A&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;
 		&lt;/p&gt;
 		&lt;p&gt;Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.&lt;/p&gt;
 		&lt;p&gt;Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.&lt;/p&gt;
@@ -341,20 +341,8 @@
 
 <script src="http://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js"></script>
 <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="script.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js"></script>
-
-<script>
-var editor = ace.edit("editor");
-editor.setTheme("ace/theme/monokai");
-editor.getSession().setMode("ace/mode/html");
-editor.getSession().setTabSize(2);
-editor.renderer.setShowPrintMargin(false);
-</script>
-
-<script>
-$(".chosen-select").chosen({width: "100%"});
-</script>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>
