@@ -41,11 +41,17 @@
 				<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
 				<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-list-alt"></i></button>
 			</div>
-			<span class="version">v 2.8.1</span>
+			<span class="version">v 2.9.0</span>
 		</div><!-- /.navbar-collapse -->
 	</nav>
 
 	<div class="editor-menu menu-container form-horizontal">
+
+		<div class="alert menu-alert text-center"></div>
+
+		<div class="form-group col-xs-12">
+			<button class="btn btn-warning btn-copy"><i class="fa fa-clipboard"></i> Copy Code</button>
+		</div>
 
 		<div class="form-group">
 			<label class="col-sm-4 x-control-label">Theme:</label>
@@ -162,8 +168,8 @@
 	<div class="content-section">
 		<div class="content">
 			<div class="content-code">
-				
-<div id="editor">&lt;!DOCTYPE html&gt;
+
+				<div id="editor">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 	&lt;title&gt;Website Title&lt;/title&gt;
@@ -329,7 +335,7 @@
 	&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</div>
+&lt;/html&gt;</div> <!-- #editor -->
 
 			</div>
 		</div>
@@ -340,9 +346,10 @@
 	</div>
 </div>
 
-<script src="http://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js"></script>
+<script src="http://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js"></script>
+<script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js" charset="utf-8"></script>
+<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 
 </body>

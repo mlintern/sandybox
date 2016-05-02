@@ -4,7 +4,6 @@ var renderer = editor.renderer;
 
 function updateWrap() {
 	var value = $("select[name=wrap] option:selected").val();
-	console.log(value);
 	switch (value) {
 		case "off":
 			session.setUseWrapMode(false);
@@ -160,3 +159,27 @@ renderer.setShowPrintMargin(false);
 
 // Activate Chosen
 $(".chosen-select").chosen({width: "100%"});
+
+//Activate Clipboard
+var clipboard = new Clipboard('.btn-copy', {
+	text: function(trigger) {
+		var iframeDoc = document.getElementById('preview').contentWindow.document.documentElement.innerHTML;
+		var html_code = "<!DOCTYPE html>\n<html>\n" + iframeDoc + "\n</html>"
+		return html_code;
+	}
+});
+clipboard.on('success', function(e) {
+	$('.menu-alert').show();
+	$('.menu-alert').removeClass('alert-danger');
+	$('.menu-alert').addClass('alert-success');
+	$('.menu-alert').html('Copied!');
+	setTimeout(function () { $('.menu-alert').hide()}, 3000);
+});
+
+clipboard.on('error', function(e) {
+	$('.menu-alert').show();
+	$('.menu-alert').removeClass('alert-success');
+	$('.menu-alert').addClass('alert-danger');
+	$('.menu-alert').html('Press Ctrl+C to copy');
+	setTimeout(function () { $('.menu-alert').hide()}, 8000);
+});
