@@ -4,23 +4,24 @@
     <title>Website Title</title>
     <meta charset="UTF-8">
     
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
     
     <!-- Latest compiled and minified Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- Optional Bootstrap theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 
     <!-- Font Awesome-->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.css" rel="stylesheet">
     <style>
-        .black:focus{outline-color:black;}
+        .black:focus{outline-color:#000000;}
         .red:focus{outline-color:#d9534f;}
         .blue:focus{outline-color:#428bca;}
         .orange:focus{outline-color:#f0ad4e;}
         .green:focus{outline-color:#5cb85c;}
         .aqua:focus{outline-color:#5bc0de;}
+        .fa strong {Font-Family: Arial;}
         /*SubMenu*/
         .dropdown-submenu{position:relative;}
         .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:0px;margin-left:5px;}
@@ -52,14 +53,17 @@
                             <ul class="dropdown-menu">
                                 <li class="menu-item "><a href="#">Third Level</a></li>
                                 <li class="menu-item "><a href="#">Third Level</a></li>
-                                <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Third Level <i class="fa fa-caret-right pull-right"></i></a>
+                                <li class="menu-item "><a href="#">Third Level</a></li>
+                                <li class="menu-item "><a href="#">Third Level</a></li>
+                                <li class="menu-item dropdown dropdown-submenu pull-left"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Third Level <i class="fa fa-caret-right pull-right"></i></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Fourth Level</a></li>
                                         <li><a href="#">Fourth Level</a></li>
                                         <li><a href="#">Fourth Level</a></li>
                                         <li><a href="#">Fourth Level</a></li>
-                                        <li class="menu-item dropdown dropdown-submenu pull-left"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Fourth Level <i class="fa fa-caret-right pull-right"></i></a>
+                                        <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Fourth Level <i class="fa fa-caret-right pull-right"></i></a>
                                             <ul class="dropdown-menu">
+                                                <li><a href="#">Fifth Level</a></li>
                                                 <li><a href="#">Fifth Level</a></li>
                                             </ul>
                                         </li>
@@ -73,7 +77,7 @@
                 <li class="menu-item"><a href="#">First Level</a></li>
             </ul>
             <div class="pull-right">
-                <button data-color="black" class="navbar-btn btn btn-default body-color-change">Default</button>
+                <button data-color="#000000" class="black navbar-btn btn btn-default body-color-change">Default</button>
                 <button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"> </button>
                 <button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"> </button>
                 <button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change"> </button>
@@ -98,8 +102,8 @@
             <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x"></i></span>
             <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x"></i></span>
             <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x"></i></span>
-            <span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>b</strong></i></span>
-            <span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>a</strong></i></span>
+            <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>B</strong></i></span>
+            <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>A</strong></i></span>
         </p>
         <p>Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.</p>
         <p>Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.</p>
@@ -131,32 +135,33 @@
         var a = {code:65,show:'<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>a</strong></i></span>'};
         var b = {code:66,show:'<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x"><strong>b</strong></i></span>'};
 
-    var sequence = [up,up,down,down,left,right,left,right,b,a];
-    var current = 0;
+        var sequence = [up,up,down,down,left,right,left,right,b,a];
+        var current = 0;
 
-    $(document).keydown(function(e){
-      if ( e.keyCode == sequence[current].code ) {
-        current++;
-        if ( current == sequence.length ) {
-          $("span.fa-stack:nth-child("+current+")").css("color","orange");
-          alert('Secret'); 
-          current = 0;
-          $('.current-btn').html(sequence[0].show);
-          $("span.fa-stack").removeAttr("style");
-        } else {
-          $('.current-btn').html(sequence[current].show);
-          $("span.fa-stack:nth-child("+current+")").css("color","orange");
-        }
-      }else{
-        current = 0;
-        $('.current-btn').html(sequence[0].show);
-        $("span.fa-stack").removeAttr("style");
-      }
+        $(document).keydown(function(e){
+            if ( e.keyCode == sequence[current].code ) {
+                e.preventDefault();
+                current++;
+                if ( current == sequence.length ) {
+                    $("span.fa-stack:nth-child("+current+")").css("color","orange");
+                    alert('Secret'); 
+                    current = 0;
+                    $('.current-btn').html(sequence[0].show);
+                    $("span.fa-stack").removeAttr("style");ba
+                } else {
+                    $('.current-btn').html(sequence[current].show);
+                    $("span.fa-stack:nth-child("+current+")").css("color","orange");
+                }
+            }else{
+                current = 0;
+                $('.current-btn').html(sequence[0].show);
+                $("span.fa-stack").removeAttr("style");
+            }
         });
     </script>
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
 </html>

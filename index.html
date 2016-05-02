@@ -29,7 +29,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand">SandyBox</a>
+			<a class="navbar-brand">Nretnil SandyBox</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,7 +41,7 @@
 				<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
 				<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-list-alt"></i></button>
 			</div>
-			<span class="version">v 2.8.0</span>
+			<span class="version">v 2.8.1</span>
 		</div><!-- /.navbar-collapse -->
 	</nav>
 
@@ -169,7 +169,7 @@
 	&lt;title&gt;Website Title&lt;/title&gt;
 	&lt;meta charset="UTF-8"&gt;
 	
-	&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.12.3.min.js"&gt;&lt;/script&gt;
 	
 	&lt;!-- Latest compiled and minified Bootstrap CSS --&gt;
 	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;
@@ -178,7 +178,7 @@
 	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"&gt;
 
 	&lt;!-- Font Awesome--&gt;
-	&lt;link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet"&gt;
+	&lt;link href="http://netdna.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.css" rel="stylesheet"&gt;
 	&lt;style&gt;
 		.black:focus{outline-color:#000000;}
 		.red:focus{outline-color:#d9534f;}
@@ -300,39 +300,40 @@
 		var a = {code:65,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;'};
 		var b = {code:66,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;'};
 
-    var sequence = [up,up,down,down,left,right,left,right,b,a];
-    var current = 0;
+		var sequence = [up,up,down,down,left,right,left,right,b,a];
+		var current = 0;
 
-    $(document).keydown(function(e){
-      if ( e.keyCode == sequence[current].code ) {
-        current++;
-        if ( current == sequence.length ) {
-          $("span.fa-stack:nth-child("+current+")").css("color","orange");
-          alert('Secret'); 
-          current = 0;
-          $('.current-btn').html(sequence[0].show);
-          $("span.fa-stack").removeAttr("style");
-        } else {
-          $('.current-btn').html(sequence[current].show);
-          $("span.fa-stack:nth-child("+current+")").css("color","orange");
-        }
-      }else{
-        current = 0;
-        $('.current-btn').html(sequence[0].show);
-        $("span.fa-stack").removeAttr("style");
-      }
+		$(document).keydown(function(e){
+			if ( e.keyCode == sequence[current].code ) {
+				e.preventDefault();
+				current++;
+				if ( current == sequence.length ) {
+					$("span.fa-stack:nth-child("+current+")").css("color","orange");
+					alert('Secret'); 
+					current = 0;
+					$('.current-btn').html(sequence[0].show);
+					$("span.fa-stack").removeAttr("style");ba
+				} else {
+					$('.current-btn').html(sequence[current].show);
+					$("span.fa-stack:nth-child("+current+")").css("color","orange");
+				}
+			}else{
+				current = 0;
+				$('.current-btn').html(sequence[0].show);
+				$("span.fa-stack").removeAttr("style");
+			}
 		});
 	&lt;/script&gt;
 
 	&lt;!-- Latest compiled and minified JavaScript --&gt;
-	&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+	&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</div>
 
 			</div>
 		</div>
-		
+
 		<div class="preview-pane">
 			<iframe name="preview" id="preview" src=""></iframe>
 		</div>
@@ -340,7 +341,7 @@
 </div>
 
 <script src="http://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js"></script>
-<script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="http://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js"></script>
 <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 
