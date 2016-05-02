@@ -79,7 +79,7 @@ $(document).ready(function() {
 		if ( $('.editor-menu').hasClass('open') ) {
 			$('.editor-menu').animate({width:'0%'});
 			$('.content-section').animate({width:'100%',left:'0%'},updateWrap);
-			$('.editor-menu').removeClass('open');
+			setTimeout(function () {$('.editor-menu').removeClass('open'); },380);
 		}else{
 			$('.editor-menu').addClass('open');
 			$('.content-section').animate({width:'80%',left:'20%'});

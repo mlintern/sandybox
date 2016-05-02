@@ -4,24 +4,20 @@ body {
 	margin: 0; 
 	padding: 0; 
 }
-
 #container { 
 	overflow: hidden;
 }
-
 .content-section { 
 	height: 90%; 
 	overflow: scroll; 
 	width: 100%; 
 	left: 0%; 
 	position: absolute; 
-
 }
 .content-section.tall {
 	height: 98%;
 	top: 5px;
 }
-
 .content { 
 	width: 40%; 
 	height: 100%; 
@@ -53,6 +49,11 @@ body {
 	position: absolute; 
 	left: 0; 
 	border-right: 2px solid #000;
+	display: none;
+	overflow: hidden;
+}
+.editor-menu.open {
+	display: block;
 }
 .editor-menu.tall{
 	height: 98%;
