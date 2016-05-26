@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 
     <!-- Font Awesome-->
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
     <style>
         .black:focus{outline-color:#000000;}
         .red:focus{outline-color:#d9534f;}
@@ -78,11 +78,11 @@
             </ul>
             <div class="pull-right">
                 <button data-color="#000000" class="black navbar-btn btn btn-default body-color-change">Default</button>
-                <button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"> </button>
-                <button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"> </button>
-                <button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change"> </button>
-                <button data-color="#5cb85c" class="green navbar-btn btn btn-success body-color-change"> </button>
-                <button data-color="#5bc0de" class="aqua navbar-btn btn btn-info body-color-change"> </button>
+                <button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change">&nbsp;</button>
+                <button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change">&nbsp;</button>
+                <button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change">&nbsp;</button>
+                <button data-color="#5cb85c" class="green navbar-btn btn btn-success body-color-change">&nbsp;</button>
+                <button data-color="#5bc0de" class="aqua navbar-btn btn btn-info body-color-change">&nbsp;</button>
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@
                     alert('Secret'); 
                     current = 0;
                     $('.current-btn').html(sequence[0].show);
-                    $("span.fa-stack").removeAttr("style");ba
+                    $("span.fa-stack").removeAttr("style");
                 } else {
                     $('.current-btn').html(sequence[current].show);
                     $("span.fa-stack:nth-child("+current+")").css("color","orange");
@@ -162,6 +162,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

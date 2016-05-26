@@ -26,8 +26,8 @@ function updateWrap() {
 }
 
 function runCode() {
-	window['preview'].document.write(editor.getValue());
-	window['preview'].document.close();
+	window.preview.document.write(editor.getValue());
+	window.preview.document.close();
 }
 
 function download(filename, text) {
@@ -39,14 +39,15 @@ function download(filename, text) {
 
 function download_html() {
 	var filename = $('#filename').val();
+	var name = '';
 	if (filename.length > 0) {
-		var name = filename
+		name = filename;
 	}else{
-		var name = new Date().getTime();
+		name = new Date().getTime();
 		name = name.toString();
 	}
 	var iframeDoc = document.getElementById('preview').contentWindow.document.documentElement.innerHTML;
-	var html_code = "<!DOCTYPE html>\n<html>\n" + iframeDoc + "\n</html>"
+	var html_code = "<!DOCTYPE html>\n<html>\n" + iframeDoc + "\n</html>";
 
 	if ( name.indexOf('.html') == -1 ) {
 		name = name + ".html";
@@ -58,7 +59,7 @@ function download_html() {
 
 $(document).ready(function() {
 
-	setTimeout(function(){runCode();},1000)
+	setTimeout(function(){runCode();},1000);
 
 	session.on('change', function(e) {
 		runCode();
@@ -71,7 +72,7 @@ $(document).ready(function() {
 		setTimeout(function(){
 			runCode();
 			$('.fa.fa-refresh').removeClass('fa-spin');
-		}, 500)
+		}, 500);
 	});
 
 	$('.menuToggle').bind('click', function() {
@@ -164,7 +165,7 @@ $(".chosen-select").chosen({width: "100%"});
 var clipboard = new Clipboard('.btn-copy', {
 	text: function(trigger) {
 		var iframeDoc = document.getElementById('preview').contentWindow.document.documentElement.innerHTML;
-		var html_code = "<!DOCTYPE html>\n<html>\n" + iframeDoc + "\n</html>"
+		var html_code = "<!DOCTYPE html>\n<html>\n" + iframeDoc + "\n</html>";
 		return html_code;
 	}
 });
@@ -173,7 +174,7 @@ clipboard.on('success', function(e) {
 	$('.menu-alert').removeClass('alert-danger');
 	$('.menu-alert').addClass('alert-success');
 	$('.menu-alert').html('Copied!');
-	setTimeout(function () { $('.menu-alert').hide()}, 3000);
+	setTimeout(function () { $('.menu-alert').hide(); }, 3000);
 });
 
 clipboard.on('error', function(e) {
@@ -181,5 +182,5 @@ clipboard.on('error', function(e) {
 	$('.menu-alert').removeClass('alert-success');
 	$('.menu-alert').addClass('alert-danger');
 	$('.menu-alert').html('Press Ctrl+C to copy');
-	setTimeout(function () { $('.menu-alert').hide()}, 8000);
+	setTimeout(function () { $('.menu-alert').hide(); }, 8000);
 });
