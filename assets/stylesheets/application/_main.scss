@@ -4,9 +4,11 @@ body {
   margin: 0; 
   padding: 0; 
 }
+
 #container { 
   overflow: hidden;
 }
+
 .content-section { 
   height: 90%; 
   overflow: scroll; 
@@ -14,16 +16,19 @@ body {
   left: 0%; 
   position: absolute; 
 }
+
 .content-section.tall {
   height: 98%;
   top: 5px;
 }
+
 .content { 
   width: 40%; 
   height: 100%; 
   position: absolute; 
   border-bottom: 2px solid #193878; 
 }
+
 .preview-pane { 
   width: 60%; 
   height: 100%; 
@@ -32,16 +37,19 @@ body {
   border-bottom: 2px solid #193878;
   background-color: #FFF; 
 }
+
 .preview-pane iframe { 
   width: 100%; 
   height: 100%; 
-  border: 0; }
+  border: 0; 
+}
 
 #editor { 
   position: absolute; 
   width: 100%; 
   height: 100%; 
 }
+
 .editor-menu {
   background-color: #fff; 
   width: 0%; 
@@ -52,36 +60,45 @@ body {
   display: none;
   overflow: hidden;
 }
+
 .editor-menu.open {
   display: block;
 }
+
 .editor-menu.tall{
   height: 98%;
   top: 5px;
 }
+
 .menu-container { 
   padding: 40px 20px 20px 20px; 
 }
+
 .menu-alert {
   display: none;
 }
+
 .navbar { 
   margin-bottom: 0; 
 }
+
 .navbar-default { 
   background-color: #f8f8f8;
   border-color: #e7e7e7;
   border: none;
   border-bottom: solid 2px #FFF; 
   border-radius: 0;
+  
+  .navbar-brand.white { 
+    color: #FFF; 
+  }
+
+  .navbar-brand.white:hover, .navbar-brand.white:focus { 
+    color: #FFF;
+    background-color: transparent; 
+  }
 }
-.navbar-default .navbar-brand { 
-  color: #FFF; 
-}
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { 
-  color: #FFF;
-  background-color: transparent; 
-}
+
 .navbar label { 
   font-size: 18px;
   color: #FFF;
@@ -89,6 +106,7 @@ body {
   padding-top: 3px;
   font-weight: 400; 
 }
+
 .version{ 
   color: #FFF;
   float: right;
