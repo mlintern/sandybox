@@ -7,109 +7,84 @@ body {
 
 #container { 
   overflow: hidden;
-}
 
-.content-section { 
-  height: 90%; 
-  overflow: scroll; 
-  width: 100%; 
-  left: 0%; 
-  position: absolute; 
-}
+  .content-section { 
+    height: 90%; 
+    overflow: scroll; 
+    width: 100%; 
+    left: 0%; 
+    position: absolute;
 
-.content-section.tall {
-  height: 98%;
-  top: 5px;
-}
+    .content { 
+      width: 40%; 
+      height: 100%; 
+      position: absolute; 
+      border-bottom: 2px solid #193878; 
 
-.content { 
-  width: 40%; 
-  height: 100%; 
-  position: absolute; 
-  border-bottom: 2px solid #193878; 
-}
+      #editor { 
+        position: absolute; 
+        width: 100%; 
+        height: 100%; 
+      }
+    }
 
-.preview-pane { 
-  width: 60%; 
-  height: 100%; 
-  position: absolute; 
-  left: 40%; 
-  border-bottom: 2px solid #193878;
-  background-color: #FFF; 
-}
-
-.preview-pane iframe { 
-  width: 100%; 
-  height: 100%; 
-  border: 0; 
-}
-
-#editor { 
-  position: absolute; 
-  width: 100%; 
-  height: 100%; 
-}
-
-.editor-menu {
-  background-color: #fff; 
-  width: 0%; 
-  height: 90%; 
-  position: absolute; 
-  left: 0; 
-  border-right: 2px solid #000;
-  display: none;
-  overflow: hidden;
-}
-
-.editor-menu.open {
-  display: block;
-}
-
-.editor-menu.tall{
-  height: 98%;
-  top: 5px;
-}
-
-.menu-container { 
-  padding: 40px 20px 20px 20px; 
-}
-
-.menu-alert {
-  display: none;
-}
-
-.navbar { 
-  margin-bottom: 0; 
-}
-
-.navbar-default { 
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
-  border: none;
-  border-bottom: solid 2px #FFF; 
-  border-radius: 0;
-  
-  .navbar-brand.white { 
-    color: #FFF; 
+    .preview-pane { 
+      width: 60%; 
+      height: 100%; 
+      position: absolute; 
+      left: 40%; 
+      border-bottom: 2px solid #193878;
+      background-color: #FFF; 
+      
+      iframe { 
+        width: 100%; 
+        height: 100%; 
+        border: 0; 
+      }
+    }
   }
 
-  .navbar-brand.white:hover, .navbar-brand.white:focus { 
-    color: #FFF;
-    background-color: transparent; 
+  .editor-menu {
+    background-color: #fff; 
+    width: 0%; 
+    height: 90%; 
+    position: absolute; 
+    left: 0; 
+    border-right: 2px solid #000;
+    display: none;
+    overflow: hidden;
+    &.open {
+      display: block;
+    }
   }
-}
 
-.navbar label { 
-  font-size: 18px;
-  color: #FFF;
-  padding-right: 10px;
-  padding-top: 3px;
-  font-weight: 400; 
-}
+  .tall{
+    height: 98%;
+    top: 5px;
+  }
 
-.version{ 
-  color: #FFF;
-  float: right;
-  display: inline-block;
-  padding: 15px; 
+  .menu-container { 
+    padding: 40px 20px 20px 20px; 
+
+    .menu-alert {
+      display: none;
+    }
+
+    .close-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  .navbar { 
+    margin-bottom: 0; 
+
+    .version{ 
+      color: #FFF;
+      float: right;
+      display: inline-block;
+      padding: 7px 15px; 
+    }
+  }
 }

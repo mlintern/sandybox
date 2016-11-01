@@ -2,6 +2,8 @@ An HTML Sandbox Environment for Javascript and HTML Testing
 
 http://sandybox.nretnil.com
 
+Ace Editor Versions: https://github.com/ajaxorg/ace-builds/releases
+
 ## Install Sass
 
 ```
@@ -11,8 +13,7 @@ gem install sass
 ### Complie Sass
 
 ```
-sass assets/stylesheets/_bootstrap.scss dist/stylesheets/bootstrap-fa-alta.css
-sass assets/stylesheets/_bootstrap.scss dist/stylesheets/bootstrap-fa-alta.min.css --style compressed
+sass assets/stylesheets/_full.scss css/fa-bs.min.css --style compressed
 ```
 or
 ```

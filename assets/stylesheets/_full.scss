@@ -1,8 +1,9 @@
 // Bootstrap CSS
-@import "bootstrap";
+@import "bootstrap/bootstrap";
 
 // Font Awesome CSS
-@import "font-awesome";
+$fa-font-path: "../fonts/font-awesome" !default;
+@import "font-awesome/font-awesome";
 
 // Application CSS
 @import "application";

@@ -8,7 +8,7 @@ namespace :sass do
   end
 
   task :fonts do
-    system 'cp -r assets/fonts .'
+    FileUtils.copy_entry 'assets/fonts', 'fonts/'
   end
 
   task :watch do

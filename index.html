@@ -11,54 +11,46 @@
 
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-	<script src="js/jquery-1.12.3.min.js" type="text/javascript"></script>
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 
 </head>
 <body class="r-fog90">
 
 	<div id="container">
-		<nav class="navbar navbar-default r-fog90" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand white">Nretnil SandyBox</a>
-			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<button type="button" class="menuToggle btn navbar-btn btn-success pull-left"><i class="fa fa-bars"></i> Menu</button>
+		<nav class="navbar navbar-dark bg-danger r-fog90">
+			<a class="navbar-brand drop-down-toggle text-white pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nretnil Sandybox</a>
+			<button type="button" class="menuToggle btn navbar-btn btn-success pull-left"><i class="fa fa-bars"></i> Menu</button>
 				<button type="button" class="reset btn navbar-btn btn-success pull-left" style="margin-left: 10px;"><i class="fa fa-refresh"></i></button>
 				<div class="btn-group navbar-btn-group pull-right">
 					<button type="button" class="screen-ctrl btn all-code btn-primary navbar-btn"><i class="fa fa-terminal"></i></button>
 					<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
 					<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-list-alt"></i></button>
 				</div>
-				<span class="version">v 3.0.0</span>
-			</div><!-- /.navbar-collapse -->
+				<span class="version">v 3.1.0</span>
 		</nav>
 
 		<div class="editor-menu menu-container form-horizontal">
 
 			<div class="alert menu-alert text-center"></div>
 
-			<div class="form-group col-xs-12">
-				<button class="btn btn-warning btn-copy"><i class="fa fa-clipboard"></i> Copy Code</button>
+			<i class="fa fa-window-close pointer close-menu fa-lg"></i>
+
+			<div class="form-group row">
+				<div class="col-xs-12">
+					<button class="btn btn-warning btn-copy"><i class="fa fa-clipboard"></i> Copy Code</button>
+				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group row">
 				<label class="col-sm-4 x-control-label">Theme:</label>
 				<div class="col-sm-8">
 					<select name="theme" class="theme form-control chosen-select">
 						<option value="ambiance">Ambiance</option>
 						<option value="chaos">Chaos</option>
 						<option value="chrome">Chrome</option>
-						<option value="clouds_midnight">Clouds Midnight</option>
 						<option value="clouds">Clouds</option>
+						<option value="clouds_midnight">Clouds Midnight</option>
 						<option value="cobalt">Cobalt</option>
 						<option value="crimson_editor">Crimson Editor</option>
 						<option value="dawn">Dawn</option>
@@ -66,12 +58,12 @@
 						<option value="eclipse">Eclipse</option>
 						<option value="github">GitHub</option>
 						<option value="idle_fingers">Idle Fingers</option>
-						<option value="kr_theme">KR</option>
-						<option value="katzenmilch">Katzenmilch</option>
-						<option value="kuroir">Kuroir</option>
 						<option value="iplastic">iPlastic</option>
-						<option value="merbivore_soft">Merbivore Soft</option>
+						<option value="katzenmilch">Katzenmilch</option>
+						<option value="kr_theme">KR</option>
+						<option value="kuroir">Kuroir</option>
 						<option value="merbivore">Merbivore</option>
+						<option value="merbivore_soft">Merbivore Soft</option>
 						<option value="mono_industrial">Mono Industrial</option>
 						<option value="monokai" selected>Monokai</option>
 						<option value="pastel_on_dark">Pastel On Dark</option>
@@ -80,11 +72,11 @@
 						<option value="sqlserver">SQL Server</option>
 						<option value="terminal">Terminal</option>
 						<option value="textmate">Textmate</option>
+						<option value="tomorrow">Tomorrow</option>
 						<option value="tomorrow_night_blue">Tomorrow Night Blue</option>
 						<option value="tomorrow_night_bright">Tomorrow Night Bright</option>
 						<option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
 						<option value="tomorrow_night">Tomorrow Night</option>
-						<option value="tomorrow">Tomorrow</option>
 						<option value="twilight">Twilight</option>
 						<option value="vibrant_ink">Vibrant Ink</option>
 						<option value="xcode">Xcode</option>
@@ -92,7 +84,7 @@
 				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group row">
 				<label class="col-sm-4 x-control-label">Font:</label>
 				<div class="col-sm-8">
 					<select name="font-size" class="form-control chosen-select">
@@ -108,7 +100,7 @@
 				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group row">
 				<label class="col-sm-4 x-control-label">Wrap:</label>
 				<div class="col-sm-8">
 					<select name="wrap" class="form-control chosen-select">
@@ -120,7 +112,7 @@
 				</div>
 			</div>
 			
-			<div class="form-group">
+			<div class="form-group row">
 				<label class="col-sm-4 x-control-label">Tab:</label>
 				<div class="col-sm-8">
 					<select name="tab-size" class="form-control chosen-select">
@@ -134,7 +126,7 @@
 				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group row">
 				<div class="col-sm-12">
 					<div class="checkbox">
 						<label>
@@ -144,7 +136,7 @@
 				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group row">
 				<div class="col-sm-12">
 					<div class="checkbox">
 						<label>
@@ -154,7 +146,7 @@
 				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group row">
 				<label class="col-sm-12">Download Your Code</label>
 				<div class="col-sm-12"><input id="filename" class="form-control" type="text" val="" placeholder="filename"></div>
 			</div>
@@ -171,17 +163,15 @@
 &lt;head&gt;
 	&lt;title&gt;Website Title&lt;/title&gt;
 	&lt;meta charset="UTF-8"&gt;
-	
-	&lt;script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"&gt;&lt;/script&gt;
-	
+
 	&lt;!-- Latest compiled and minified Bootstrap CSS --&gt;
-	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;
+	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
 
 	&lt;!-- Optional Bootstrap theme --&gt;
-	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"&gt;
+	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"&gt;
 
 	&lt;!-- Font Awesome--&gt;
-	&lt;link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"&gt;
+	&lt;link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"&gt;
 	&lt;style&gt;
 		.black:focus{outline-color:#000000;}
 		.red:focus{outline-color:#d9534f;}
@@ -257,24 +247,24 @@
 	&lt;div style="height: 70px;"&gt;&lt;/div&gt;
 	&lt;div class="container"&gt;
 		&lt;h1&gt;Bicycle&lt;/h1&gt;
-		
+
 		&lt;h1&gt;&lt;i class="fa fa-bicycle text-info fa-3x"&gt;&lt;/i&gt;&lt;/h1&gt;
-		
+
 		&lt;h1&gt;Spin Cycle&lt;/h1&gt;
-		
+
 		&lt;span class="fa-stack fa-5x"&gt;
-      &lt;i class="fa fa-square fa-spin fa-stack-2x"&gt;&lt;/i&gt;
-      &lt;i class="fa fa-motorcycle fa-stack-1x text-danger"&gt;&lt;/i&gt;
-    &lt;/span&gt;
-    
-    &lt;span class="fa-stack fa-5x"&gt;
-      &lt;i class="fa fa-circle-thin fa-stack-2x text-success"&gt;&lt;/i&gt;
-      &lt;i class="fa fa-hand-rock-o fa-spin fa-stack-1x text-warning"&gt;&lt;/i&gt;
-    &lt;/span&gt;
-    
+			&lt;i class="fa fa-square fa-spin fa-stack-2x"&gt;&lt;/i&gt;
+			&lt;i class="fa fa-motorcycle fa-stack-1x text-danger"&gt;&lt;/i&gt;
+		&lt;/span&gt;
+
+		&lt;span class="fa-stack fa-5x"&gt;
+			&lt;i class="fa fa-circle-thin fa-stack-2x text-success"&gt;&lt;/i&gt;
+			&lt;i class="fa fa-hand-rock-o fa-spin fa-stack-1x text-warning"&gt;&lt;/i&gt;
+		&lt;/span&gt;
+
 		&lt;h2&gt;Futbol&lt;/h2&gt;
 		&lt;h2&gt;&lt;i class="fa fa-futbol-o text-success fa-3x"&gt;&lt;/i&gt;&lt;/h2&gt;
-		
+
 		&lt;h3&gt;Top Secret&lt;/h3&gt;
 		&lt;p&gt;
 			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
@@ -292,12 +282,15 @@
 		&lt;p&gt;Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.&lt;/p&gt;
 		&lt;p&gt;Magna ad, mauris sit quisque amet porta rutrum nunc, in justo metus fringilla pellentesque venenatis, metus eget praesent, blanditiis maecenas suscipit aliquam nec placerat. Potenti erat dolor sit lobortis, pellentesque sit vestibulum commodo at mauris ipsum, wisi justo nulla leo feugiat nonummy, non non porta tortor et elit quis, ut lectus lorem rhoncus. Ut ligula fusce enim lectus condimentum, wisi magna et, suspendisse lacus lobortis, mi vulputate suspendisse eget vestibulum enim. Nam parturient, fermentum semper, sed parturient sed vitae consequat. Eget metus felis dictum, vulputate et morbi molestie. Consequat etiam arcu amet bibendum aenean eu, egestas lacus sed fusce arcu id sociis. Id nulla est morbi sed eu in, neque nullam eros amet vestibulum ornare odio, dignissim adipiscing, in nunc tincidunt ut mattis quis. Consectetuer enim nullam. Fermentum malesuada adipiscing ridiculus morbi sed, in ultrices nulla, erat id cursus, risus litora. Lacus egestas pede accumsan augue euismod, posuere nunc ullamcorper maecenas consectetuer et, aenean in at dui justo lacus ullamcorper. Eros aenean ante erat posuere, sit amet pellentesque.&lt;/p&gt;
 	&lt;/div&gt;
+
+	&lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;
+
 	&lt;script&gt;
 		$('.body-color-change').click(function(){
 			var color = $(this).data("color");
 			$('body').css('color',color);
 		});
-		
+
 		// Multiple Layer Menu
 		$(document).ready(function() {
 			$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
@@ -309,7 +302,7 @@
 				$(this).parent().toggleClass('open');
 			});
 		});
-		
+
 		// Konami Code
 		var up = {code:38,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
 		var down = {code:40,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-down fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
@@ -344,7 +337,7 @@
 	&lt;/script&gt;
 
 	&lt;!-- Latest compiled and minified JavaScript --&gt;
-	&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;
+	&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</div> <!-- #editor -->
@@ -359,10 +352,10 @@
 	</div>
 
 	<script src="https://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js" charset="utf-8"></script>
-	<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/src-min-noconflict/ace.js?v=1.2.5" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js?v=1.1.1" charset="utf-8"></script>
+	<script src="js/clipboard.min.js?v=1.5.8" type="text/javascript" charset="utf-8"></script>
+	<script src="js/script.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>
