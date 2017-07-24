@@ -2,360 +2,317 @@
 <html lang="en">
 <head>
 
-	<title>Nretnil SandyBox</title>
-	<meta charset="UTF-8" />
+  <title>Nretnil SandyBox</title>
+  <meta charset="UTF-8" />
 
-	<link type="text/css" href="https://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.min.css" rel="stylesheet">
-	<link type="text/css" href="https://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
-	<link href="css/fa-bs.min.css?v=1.0.0" rel="stylesheet" type="text/css">
+  <link type="text/css" href="https://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.min.css" rel="stylesheet">
+  <link type="text/css" href="https://dev.nretnil.com/staging/tools/css/fog/fog.css" rel="stylesheet">
+  <link href="css/fa-bs.min.css?v=1.0.0" rel="stylesheet" type="text/css">
 
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-	<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 
 </head>
 <body class="r-fog90">
 
-	<div id="container">
+  <div id="container">
 
-		<nav class="navbar navbar-dark bg-danger r-fog90">
-			<a class="navbar-brand drop-down-toggle text-white pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nretnil Sandybox</a>
-			<button type="button" class="menuToggle btn navbar-btn btn-success pull-left"><i class="fa fa-bars"></i> Menu</button>
-				<button type="button" class="reset btn navbar-btn btn-success pull-left" style="margin-left: 10px;"><i class="fa fa-refresh"></i></button>
-				<div class="btn-group navbar-btn-group pull-right">
-					<button type="button" class="screen-ctrl btn all-code btn-primary navbar-btn"><i class="fa fa-terminal"></i></button>
-					<button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
-					<button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-list-alt"></i></button>
-				</div>
-				<span class="version">v 3.1.1</span>
-		</nav>
+    <nav class="navbar navbar-dark bg-danger r-fog90">
+      <a class="navbar-brand drop-down-toggle text-white pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nretnil Sandybox</a>
+      <button type="button" class="menuToggle btn navbar-btn btn-success pull-left"><i class="fa fa-bars"></i> Menu</button>
+        <button type="button" class="reset btn navbar-btn btn-success pull-left" style="margin-left: 10px;"><i class="fa fa-refresh"></i></button>
+        <div class="btn-group navbar-btn-group pull-right">
+          <button type="button" class="screen-ctrl btn all-code btn-primary navbar-btn"><i class="fa fa-terminal"></i></button>
+          <button type="button" class="screen-ctrl btn split btn-primary btn-warning navbar-btn"><i class="fa fa-columns"></i></button>
+          <button type="button" class="screen-ctrl btn all-display btn-primary navbar-btn"><i class="fa fa-list-alt"></i></button>
+        </div>
+        <span class="version">v 3.1.1</span>
+    </nav>
 
-		<div class="editor-menu menu-container form-horizontal">
+    <div class="editor-menu menu-container form-horizontal">
 
-			<div class="alert menu-alert text-center"></div>
+      <div class="alert menu-alert text-center"></div>
 
-			<i class="fa fa-window-close pointer close-menu fa-lg"></i>
+      <i class="fa fa-window-close pointer close-menu fa-lg"></i>
 
-			<div class="form-group row">
-				<div class="col-xs-12">
-					<button class="btn btn-warning btn-copy"><i class="fa fa-clipboard"></i> Copy Code</button>
-				</div>
-			</div>
+      <div class="form-group row">
+        <div class="col-xs-12">
+          <button class="btn btn-warning btn-copy"><i class="fa fa-clipboard"></i> Copy Code</button>
+        </div>
+      </div>
 
-			<div class="form-group row">
-				<label class="col-sm-4 x-control-label">Theme:</label>
-				<div class="col-sm-8">
-					<select name="theme" class="theme form-control chosen-select">
-						<option value="ambiance">Ambiance</option>
-						<option value="chaos">Chaos</option>
-						<option value="chrome">Chrome</option>
-						<option value="clouds">Clouds</option>
-						<option value="clouds_midnight">Clouds Midnight</option>
-						<option value="cobalt">Cobalt</option>
-						<option value="crimson_editor">Crimson Editor</option>
-						<option value="dawn">Dawn</option>
-						<option value="dreamweaver">Dreamweaver</option>
-						<option value="eclipse">Eclipse</option>
-						<option value="github">GitHub</option>
-						<option value="idle_fingers">Idle Fingers</option>
-						<option value="iplastic">iPlastic</option>
-						<option value="katzenmilch">Katzenmilch</option>
-						<option value="kr_theme">KR</option>
-						<option value="kuroir">Kuroir</option>
-						<option value="merbivore">Merbivore</option>
-						<option value="merbivore_soft">Merbivore Soft</option>
-						<option value="mono_industrial">Mono Industrial</option>
-						<option value="monokai" selected>Monokai</option>
-						<option value="pastel_on_dark">Pastel On Dark</option>
-						<option value="solarized_dark">Solarized Dark</option>
-						<option value="solarized_light">Solarized Light</option>
-						<option value="sqlserver">SQL Server</option>
-						<option value="terminal">Terminal</option>
-						<option value="textmate">Textmate</option>
-						<option value="tomorrow">Tomorrow</option>
-						<option value="tomorrow_night_blue">Tomorrow Night Blue</option>
-						<option value="tomorrow_night_bright">Tomorrow Night Bright</option>
-						<option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
-						<option value="tomorrow_night">Tomorrow Night</option>
-						<option value="twilight">Twilight</option>
-						<option value="vibrant_ink">Vibrant Ink</option>
-						<option value="xcode">Xcode</option>
-					</select>
-				</div>
-			</div>
+      <div class="form-group row">
+        <label class="col-sm-4 x-control-label">Theme:</label>
+        <div class="col-sm-8">
+          <select name="theme" class="theme form-control chosen-select">
+            <option value="ambiance">Ambiance</option>
+            <option value="chaos">Chaos</option>
+            <option value="chrome">Chrome</option>
+            <option value="clouds">Clouds</option>
+            <option value="clouds_midnight">Clouds Midnight</option>
+            <option value="cobalt">Cobalt</option>
+            <option value="crimson_editor">Crimson Editor</option>
+            <option value="dawn">Dawn</option>
+            <option value="dreamweaver">Dreamweaver</option>
+            <option value="eclipse">Eclipse</option>
+            <option value="github">GitHub</option>
+            <option value="idle_fingers">Idle Fingers</option>
+            <option value="iplastic">iPlastic</option>
+            <option value="katzenmilch">Katzenmilch</option>
+            <option value="kr_theme">KR</option>
+            <option value="kuroir">Kuroir</option>
+            <option value="merbivore">Merbivore</option>
+            <option value="merbivore_soft">Merbivore Soft</option>
+            <option value="mono_industrial">Mono Industrial</option>
+            <option value="monokai" selected>Monokai</option>
+            <option value="pastel_on_dark">Pastel On Dark</option>
+            <option value="solarized_dark">Solarized Dark</option>
+            <option value="solarized_light">Solarized Light</option>
+            <option value="sqlserver">SQL Server</option>
+            <option value="terminal">Terminal</option>
+            <option value="textmate">Textmate</option>
+            <option value="tomorrow">Tomorrow</option>
+            <option value="tomorrow_night_blue">Tomorrow Night Blue</option>
+            <option value="tomorrow_night_bright">Tomorrow Night Bright</option>
+            <option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
+            <option value="tomorrow_night">Tomorrow Night</option>
+            <option value="twilight">Twilight</option>
+            <option value="vibrant_ink">Vibrant Ink</option>
+            <option value="xcode">Xcode</option>
+          </select>
+        </div>
+      </div>
 
-			<div class="form-group row">
-				<label class="col-sm-4 x-control-label">Font:</label>
-				<div class="col-sm-8">
-					<select name="font-size" class="form-control chosen-select">
-						<option value="10">10px</option>
-						<option value="11">11px</option>
-						<option value="12" selected>12px</option>
-						<option value="13">13px</option>
-						<option value="14">14px</option>
-						<option value="16">16px</option>
-						<option value="18">18px</option>
-						<option value="20">20px</option>
-					</select>
-				</div>
-			</div>
+      <div class="form-group row">
+        <label class="col-sm-4 x-control-label">Font:</label>
+        <div class="col-sm-8">
+          <select name="font-size" class="form-control chosen-select">
+            <option value="10">10px</option>
+            <option value="11">11px</option>
+            <option value="12" selected>12px</option>
+            <option value="13">13px</option>
+            <option value="14">14px</option>
+            <option value="16">16px</option>
+            <option value="18">18px</option>
+            <option value="20">20px</option>
+          </select>
+        </div>
+      </div>
 
-			<div class="form-group row">
-				<label class="col-sm-4 x-control-label">Wrap:</label>
-				<div class="col-sm-8">
-					<select name="wrap" class="form-control chosen-select">
-						<option value="off" selected>Off</option>
-						<option value="40">40 Chars</option>
-						<option value="80">80 Chars</option>
-						<option value="free">Free</option>
-					</select>
-				</div>
-			</div>
+      <div class="form-group row">
+        <label class="col-sm-4 x-control-label">Wrap:</label>
+        <div class="col-sm-8">
+          <select name="wrap" class="form-control chosen-select">
+            <option value="off" selected>Off</option>
+            <option value="40">40 Chars</option>
+            <option value="80">80 Chars</option>
+            <option value="free">Free</option>
+          </select>
+        </div>
+      </div>
 
-			<div class="form-group row">
-				<label class="col-sm-4 x-control-label">Tab:</label>
-				<div class="col-sm-8">
-					<select name="tab-size" class="form-control chosen-select">
-						<option value="1">1 space</option>
-						<option value="2" selected>2 space</option>
-						<option value="3">3 space</option>
-						<option value="4">4 space</option>
-						<option value="5">5 space</option>
-						<option value="6">6 space</option>
-					</select>
-				</div>
-			</div>
+      <div class="form-group row">
+        <label class="col-sm-4 x-control-label">Tab:</label>
+        <div class="col-sm-8">
+          <select name="tab-size" class="form-control chosen-select">
+            <option value="1">1 space</option>
+            <option value="2" selected>2 space</option>
+            <option value="3">3 space</option>
+            <option value="4">4 space</option>
+            <option value="5">5 space</option>
+            <option value="6">6 space</option>
+          </select>
+        </div>
+      </div>
 
-			<div class="form-group row">
-				<div class="col-sm-12">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" name="showInvisibles"> Show Invisibles
-						</label>
-					</div>
-				</div>
-			</div>
+      <div class="form-group row">
+        <div class="col-sm-12">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="showInvisibles"> Show Invisibles
+            </label>
+          </div>
+        </div>
+      </div>
 
-			<div class="form-group row">
-				<div class="col-sm-12">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" name="autoHide"> Auto Hide Navbar
-						</label>
-					</div>
-				</div>
-			</div>
+      <div class="form-group row">
+        <div class="col-sm-12">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="autoHide"> Auto Hide Navbar
+            </label>
+          </div>
+        </div>
+      </div>
 
-			<div class="form-group row">
-				<label class="col-sm-12">Download Your Code</label>
-				<div class="col-sm-12"><input id="filename" class="form-control" type="text" val="" placeholder="filename"></div>
-			</div>
-			<button type="submit" class="btn btn-info" onclick="download_html();"><i class="fa fa-download"></i> Download</button>
+      <div class="form-group row">
+        <label class="col-sm-12">Download Your Code</label>
+        <div class="col-sm-12"><input id="filename" class="form-control" type="text" val="" placeholder="filename"></div>
+      </div>
+      <button type="submit" class="btn btn-info" onclick="download_html();"><i class="fa fa-download"></i> Download</button>
 
-		</div>
+    </div>
 
-		<div class="content-section">
-			<div class="content">
-				<div class="content-code">
+    <div class="content-section">
+      <div class="content">
+        <div class="content-code">
 
-					<div id="editor">&lt;!DOCTYPE html&gt;
+          <div id="editor">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-	&lt;title&gt;Website Title&lt;/title&gt;
-	&lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Website Title&lt;/title&gt;
+  &lt;meta charset="UTF-8"&gt;
 
-	&lt;!-- Latest compiled and minified Bootstrap CSS --&gt;
-	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+  &lt;link rel="stylesheet" href="http://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css"&gt;
 
-	&lt;!-- Optional Bootstrap theme --&gt;
-	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"&gt;
-
-	&lt;!-- Font Awesome--&gt;
-	&lt;link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"&gt;
-	&lt;style&gt;
-		.black:focus{outline-color:#000000;}
-		.red:focus{outline-color:#d9534f;}
-		.blue:focus{outline-color:#428bca;}
-		.orange:focus{outline-color:#f0ad4e;}
-		.green:focus{outline-color:#5cb85c;}
-		.aqua:focus{outline-color:#5bc0de;}
-		.fa strong {Font-Family: Arial;}
-		/*SubMenu*/
-		.dropdown-submenu{position:relative;}
-		.dropdown-submenu&gt;.dropdown-menu{top:0;left:100%;margin-top:0px;margin-left:5px;}
-		/*.dropdown-submenu:hover&gt;.dropdown-menu{display:block;}*/
-		.dropdown-submenu.pull-left{float:none!important;}
-		.dropdown-submenu.pull-left&gt;.dropdown-menu{left:-111%;margin-left:10px;}
-		.fa.fa-caret-right{top: 3px;position: relative;}
-	&lt;/style&gt;
+  &lt;style&gt;
+    .black:focus{outline-color:#000000;}
+    .red:focus{outline-color:#d9534f;}
+    .blue:focus{outline-color:#428bca;}
+    .orange:focus{outline-color:#f0ad4e;}
+    .green:focus{outline-color:#5cb85c;}
+    .aqua:focus{outline-color:#5bc0de;}
+    .fa strong {Font-Family: Arial;}
+    .fa.fa-caret-right{top: 3px;position: relative;}
+  &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	&lt;div class="navbar navbar-default navbar-fixed-top" role="navigation"&gt;
-		&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
-		&lt;div class="navbar-header"&gt;
-			&lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"&gt;
-				&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-				&lt;span class="icon-bar"&gt;&lt;/span&gt;
-				&lt;span class="icon-bar"&gt;&lt;/span&gt;
-				&lt;span class="icon-bar"&gt;&lt;/span&gt;
-			&lt;/button&gt;
-			&lt;a class="navbar-brand" href="#"&gt;&lt;i class="icon-home icon-white"&gt; &lt;/i&gt;SandyBox Example&lt;/a&gt;
-		&lt;/div&gt;
-		&lt;div class="collapse navbar-collapse navbar-ex1-collapse"&gt;
-			&lt;ul class="nav navbar-nav"&gt;
-				&lt;li class="menu-item"&gt;&lt;a href="#"&gt;First Level&lt;/a&gt;&lt;/li&gt;
-				&lt;li class="menu-item dropdown"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;First Level &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/a&gt;
-					&lt;ul class="dropdown-menu"&gt;
-						&lt;li class="menu-item"&gt;&lt;a href="#"&gt;Second Level&lt;/a&gt;&lt;/li&gt;
-						&lt;li class="menu-item dropdown dropdown-submenu"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Second Level &lt;i class="fa fa-caret-right pull-right"&gt;&lt;/i&gt;&lt;/a&gt;
-							&lt;ul class="dropdown-menu"&gt;
-								&lt;li class="menu-item "&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
-								&lt;li class="menu-item "&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
-								&lt;li class="menu-item "&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
-								&lt;li class="menu-item "&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
-								&lt;li class="menu-item dropdown dropdown-submenu pull-left"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Third Level &lt;i class="fa fa-caret-right pull-right"&gt;&lt;/i&gt;&lt;/a&gt;
-									&lt;ul class="dropdown-menu"&gt;
-										&lt;li&gt;&lt;a href="#"&gt;Fourth Level&lt;/a&gt;&lt;/li&gt;
-										&lt;li&gt;&lt;a href="#"&gt;Fourth Level&lt;/a&gt;&lt;/li&gt;
-										&lt;li&gt;&lt;a href="#"&gt;Fourth Level&lt;/a&gt;&lt;/li&gt;
-										&lt;li&gt;&lt;a href="#"&gt;Fourth Level&lt;/a&gt;&lt;/li&gt;
-										&lt;li class="menu-item dropdown dropdown-submenu"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Fourth Level &lt;i class="fa fa-caret-right pull-right"&gt;&lt;/i&gt;&lt;/a&gt;
-											&lt;ul class="dropdown-menu"&gt;
-												&lt;li&gt;&lt;a href="#"&gt;Fifth Level&lt;/a&gt;&lt;/li&gt;
-												&lt;li&gt;&lt;a href="#"&gt;Fifth Level&lt;/a&gt;&lt;/li&gt;
-											&lt;/ul&gt;
-										&lt;/li&gt;
-									&lt;/ul&gt;
-								&lt;/li&gt;
-							&lt;/ul&gt;
-						&lt;/li&gt;
-						&lt;li class="menu-item"&gt;&lt;a href="#"&gt;Second Level&lt;/a&gt;&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/li&gt;
-				&lt;li class="menu-item"&gt;&lt;a href="#"&gt;First Level&lt;/a&gt;&lt;/li&gt;
-			&lt;/ul&gt;
-			&lt;div class="pull-right"&gt;
-				&lt;button data-color="#000000" class="black navbar-btn btn btn-default body-color-change"&gt;Default&lt;/button&gt;
-				&lt;button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"&gt; &lt;/button&gt;
-				&lt;button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"&gt; &lt;/button&gt;
-				&lt;button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change"&gt; &lt;/button&gt;
-				&lt;button data-color="#5cb85c" class="green navbar-btn btn btn-success body-color-change"&gt; &lt;/button&gt;
-				&lt;button data-color="#5bc0de" class="aqua navbar-btn btn btn-info body-color-change"&gt; &lt;/button&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div style="height: 70px;"&gt;&lt;/div&gt;
-	&lt;div class="container"&gt;
-		&lt;h1&gt;Bicycle&lt;/h1&gt;
+  &lt;div class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;&lt;span data-toggle="tooltip" data-placement="bottom" title="1.2.0"&gt;Fontstrap&lt;/span&gt;&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+      &lt;ul class="navbar-nav mr-auto"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Link One&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item dropdown"&gt;
+          &lt;a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"&gt;More Options&lt;/a&gt;
+          &lt;div class="dropdown-menu"&gt;
+            &lt;a class="dropdown-item" href="#"&gt;Link Three&lt;/a&gt;
+            &lt;a class="dropdown-item" href="#"&gt;Link Four&lt;/a&gt;
+            &lt;a class="dropdown-item" href="#"&gt;Link Five&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Link Two&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class="mr-2"&gt;
+        &lt;button data-color="#000000" class="black navbar-btn btn btn-default body-color-change"&gt;Default&lt;/button&gt;
+        &lt;button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"&gt; &lt;/button&gt;
+        &lt;button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"&gt; &lt;/button&gt;
+        &lt;button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change"&gt; &lt;/button&gt;
+        &lt;button data-color="#5cb85c" class="green navbar-btn btn btn-success body-color-change"&gt; &lt;/button&gt;
+        &lt;button data-color="#5bc0de" class="aqua navbar-btn btn btn-info body-color-change"&gt; &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 
-		&lt;h1&gt;&lt;i class="fa fa-bicycle text-info fa-3x"&gt;&lt;/i&gt;&lt;/h1&gt;
+  &lt;div style="height: 90px;"&gt;&lt;/div&gt;
+  &lt;div class="container"&gt;
+    &lt;h1&gt;Bicycle&lt;/h1&gt;
 
-		&lt;h1&gt;Spin Cycle&lt;/h1&gt;
+    &lt;h1&gt;&lt;i class="fa fa-bicycle text-info fa-3x"&gt;&lt;/i&gt;&lt;/h1&gt;
 
-		&lt;span class="fa-stack fa-5x"&gt;
-			&lt;i class="fa fa-square fa-spin fa-stack-2x"&gt;&lt;/i&gt;
-			&lt;i class="fa fa-motorcycle fa-stack-1x text-danger"&gt;&lt;/i&gt;
-		&lt;/span&gt;
+    &lt;h1&gt;Spin Cycle&lt;/h1&gt;
 
-		&lt;span class="fa-stack fa-5x"&gt;
-			&lt;i class="fa fa-circle-thin fa-stack-2x text-success"&gt;&lt;/i&gt;
-			&lt;i class="fa fa-hand-rock-o fa-spin fa-stack-1x text-warning"&gt;&lt;/i&gt;
-		&lt;/span&gt;
+    &lt;span class="fa-stack fa-5x"&gt;
+      &lt;i class="fa fa-square fa-spin fa-stack-2x"&gt;&lt;/i&gt;
+      &lt;i class="fa fa-motorcycle fa-stack-1x text-danger"&gt;&lt;/i&gt;
+    &lt;/span&gt;
 
-		&lt;h2&gt;Futbol&lt;/h2&gt;
-		&lt;h2&gt;&lt;i class="fa fa-futbol-o text-success fa-3x"&gt;&lt;/i&gt;&lt;/h2&gt;
+    &lt;span class="fa-stack fa-5x"&gt;
+      &lt;i class="fa fa-circle-thin fa-stack-2x text-success"&gt;&lt;/i&gt;
+      &lt;i class="fa fa-hand-rock-o fa-spin fa-stack-1x text-warning"&gt;&lt;/i&gt;
+    &lt;/span&gt;
 
-		&lt;h3&gt;Top Secret&lt;/h3&gt;
-		&lt;p&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-down fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-down fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-left fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-left fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;
-			&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;A&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;
-		&lt;/p&gt;
-		&lt;p&gt;Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.&lt;/p&gt;
-		&lt;p&gt;Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.&lt;/p&gt;
-		&lt;p&gt;Magna ad, mauris sit quisque amet porta rutrum nunc, in justo metus fringilla pellentesque venenatis, metus eget praesent, blanditiis maecenas suscipit aliquam nec placerat. Potenti erat dolor sit lobortis, pellentesque sit vestibulum commodo at mauris ipsum, wisi justo nulla leo feugiat nonummy, non non porta tortor et elit quis, ut lectus lorem rhoncus. Ut ligula fusce enim lectus condimentum, wisi magna et, suspendisse lacus lobortis, mi vulputate suspendisse eget vestibulum enim. Nam parturient, fermentum semper, sed parturient sed vitae consequat. Eget metus felis dictum, vulputate et morbi molestie. Consequat etiam arcu amet bibendum aenean eu, egestas lacus sed fusce arcu id sociis. Id nulla est morbi sed eu in, neque nullam eros amet vestibulum ornare odio, dignissim adipiscing, in nunc tincidunt ut mattis quis. Consectetuer enim nullam. Fermentum malesuada adipiscing ridiculus morbi sed, in ultrices nulla, erat id cursus, risus litora. Lacus egestas pede accumsan augue euismod, posuere nunc ullamcorper maecenas consectetuer et, aenean in at dui justo lacus ullamcorper. Eros aenean ante erat posuere, sit amet pellentesque.&lt;/p&gt;
-	&lt;/div&gt;
+    &lt;h2&gt;Futbol&lt;/h2&gt;
+    &lt;h2&gt;&lt;i class="fa fa-futbol-o text-success fa-3x"&gt;&lt;/i&gt;&lt;/h2&gt;
 
-	&lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;
+    &lt;h3&gt;Top Secret&lt;/h3&gt;
+    &lt;p class="code-sequence"&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-down fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-down fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-left fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-left fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;A&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.&lt;/p&gt;
+    &lt;p&gt;Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.&lt;/p&gt;
+    &lt;p&gt;Magna ad, mauris sit quisque amet porta rutrum nunc, in justo metus fringilla pellentesque venenatis, metus eget praesent, blanditiis maecenas suscipit aliquam nec placerat. Potenti erat dolor sit lobortis, pellentesque sit vestibulum commodo at mauris ipsum, wisi justo nulla leo feugiat nonummy, non non porta tortor et elit quis, ut lectus lorem rhoncus. Ut ligula fusce enim lectus condimentum, wisi magna et, suspendisse lacus lobortis, mi vulputate suspendisse eget vestibulum enim. Nam parturient, fermentum semper, sed parturient sed vitae consequat. Eget metus felis dictum, vulputate et morbi molestie. Consequat etiam arcu amet bibendum aenean eu, egestas lacus sed fusce arcu id sociis. Id nulla est morbi sed eu in, neque nullam eros amet vestibulum ornare odio, dignissim adipiscing, in nunc tincidunt ut mattis quis. Consectetuer enim nullam. Fermentum malesuada adipiscing ridiculus morbi sed, in ultrices nulla, erat id cursus, risus litora. Lacus egestas pede accumsan augue euismod, posuere nunc ullamcorper maecenas consectetuer et, aenean in at dui justo lacus ullamcorper. Eros aenean ante erat posuere, sit amet pellentesque.&lt;/p&gt;
+  &lt;/div&gt;
 
-	&lt;script&gt;
-		$('.body-color-change').click(function(){
-			var color = $(this).data("color");
-			$('body').css('color',color);
-		});
+  &lt;script src="http://dev.nretnil.com/staging/tools/fontstrap/js/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="http://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.js"&gt;&lt;/script&gt;
 
-		// Multiple Layer Menu
-		$(document).ready(function() {
-			$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
-				// Avoid following the href location when clicking
-				event.preventDefault();
-				// Avoid having the menu to close when clicking
-				event.stopPropagation();
-				// opening the one you clicked on
-				$(this).parent().toggleClass('open');
-			});
-		});
+  &lt;script&gt;
+    $('.body-color-change').click(function(){
+      var color = $(this).data("color");
+      $('body').css('color',color);
+    });
 
-		// Konami Code
-		var up = {code:38,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
-		var down = {code:40,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-down fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
-		var right = {code:39,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
-		var left = {code:37,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-left fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
-		var a = {code:65,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;'};
-		var b = {code:66,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;'};
+    // Multiple Layer Menu
+    $(document).ready(function() {
+      $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+        // Avoid following the href location when clicking
+        event.preventDefault();
+        // Avoid having the menu to close when clicking
+        event.stopPropagation();
+        // opening the one you clicked on
+        $(this).parent().toggleClass('open');
+      });
+    });
 
-		var sequence = [up,up,down,down,left,right,left,right,b,a];
-		var current = 0;
+    // Konami Code
+    var up = {code:38,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-up fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
+    var down = {code:40,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-down fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
+    var right = {code:39,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-right fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
+    var left = {code:37,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-square-o fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-arrow-left fa-stack-1x"&gt;&lt;/i&gt;&lt;/span&gt;'};
+    var a = {code:65,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;'};
+    var b = {code:66,show:'&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle-thin fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-stack-1x"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/i&gt;&lt;/span&gt;'};
 
-		$(document).keydown(function(e){
-			if ( e.keyCode == sequence[current].code ) {
-				e.preventDefault();
-				current++;
-				if ( current == sequence.length ) {
-					$("span.fa-stack:nth-child("+current+")").css("color","orange");
-					alert('Secret');
-					current = 0;
-					$('.current-btn').html(sequence[0].show);
-					$("span.fa-stack").removeAttr("style");
-				} else {
-					$('.current-btn').html(sequence[current].show);
-					$("span.fa-stack:nth-child("+current+")").css("color","orange");
-				}
-			}else{
-				current = 0;
-				$('.current-btn').html(sequence[0].show);
-				$("span.fa-stack").removeAttr("style");
-			}
-		});
-	&lt;/script&gt;
+    var sequence = [up,up,down,down,left,right,left,right,b,a];
+    var current = 0;
 
-	&lt;!-- Latest compiled and minified JavaScript --&gt;
-	&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    $(document).keydown(function(e){
+      if ( e.keyCode == sequence[current].code ) {
+        e.preventDefault();
+        current++;
+        if ( current == sequence.length ) {
+          current = 0;
+          $("span.fa-stack").removeAttr("style");
+          setTimeout(function () { alert('Secret'); }, 200);
+        } else {
+          $(".code-sequence span.fa-stack:nth-child("+current+")").css("color","orange");
+        }
+      }else{
+        current = 0;
+        $(".code-sequence span.fa-stack").removeAttr("style");
+      }
+    });
+  &lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</div> <!-- #editor -->
 
-				</div>
-			</div>
+        </div>
+      </div>
 
-			<div class="preview-pane">
-				<iframe name="preview" id="preview" src=""></iframe>
-			</div>
-		</div>
-	</div>
+      <div class="preview-pane">
+        <iframe name="preview" id="preview" src=""></iframe>
+      </div>
+    </div>
+  </div>
 
-	<script src="https://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/src-min-noconflict/ace.js?v=1.2.5" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" src="https://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js?v=1.1.1" charset="utf-8"></script>
-	<script src="js/clipboard.min.js?v=1.5.8" type="text/javascript" charset="utf-8"></script>
-	<script src="js/script.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
+  <script src="https://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/src-min-noconflict/ace.js?v=1.2.5" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="https://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js?v=1.1.1" charset="utf-8"></script>
+  <script src="js/clipboard.min.js?v=1.5.8" type="text/javascript" charset="utf-8"></script>
+  <script src="js/script.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>

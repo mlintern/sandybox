@@ -3,15 +3,9 @@
 <head>
   <title>Website Title</title>
   <meta charset="UTF-8">
-  
-  <!-- Latest compiled and minified Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <!-- Optional Bootstrap theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="http://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css">
 
-  <!-- Font Awesome-->
-  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <style>
     .black:focus{outline-color:#000000;}
     .red:focus{outline-color:#d9534f;}
@@ -20,61 +14,29 @@
     .green:focus{outline-color:#5cb85c;}
     .aqua:focus{outline-color:#5bc0de;}
     .fa strong {Font-Family: Arial;}
-    /*SubMenu*/
-    .dropdown-submenu{position:relative;}
-    .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:0px;margin-left:5px;}
-    /*.dropdown-submenu:hover>.dropdown-menu{display:block;}*/
-    .dropdown-submenu.pull-left{float:none!important;}
-    .dropdown-submenu.pull-left>.dropdown-menu{left:-111%;margin-left:10px;}
     .fa.fa-caret-right{top: 3px;position: relative;}
   </style>
 </head>
 <body>
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><i class="icon-home icon-white"> </i>SandyBox Example</a>
-    </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <li class="menu-item"><a href="#">First Level</a></li>
-        <li class="menu-item dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">First Level <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-menu">
-            <li class="menu-item"><a href="#">Second Level</a></li>
-            <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Second Level <i class="fa fa-caret-right pull-right"></i></a>
-              <ul class="dropdown-menu">
-                <li class="menu-item "><a href="#">Third Level</a></li>
-                <li class="menu-item "><a href="#">Third Level</a></li>
-                <li class="menu-item "><a href="#">Third Level</a></li>
-                <li class="menu-item "><a href="#">Third Level</a></li>
-                <li class="menu-item dropdown dropdown-submenu pull-left"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Third Level <i class="fa fa-caret-right pull-right"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Fourth Level</a></li>
-                    <li><a href="#">Fourth Level</a></li>
-                    <li><a href="#">Fourth Level</a></li>
-                    <li><a href="#">Fourth Level</a></li>
-                    <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Fourth Level <i class="fa fa-caret-right pull-right"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Fifth Level</a></li>
-                        <li><a href="#">Fifth Level</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item"><a href="#">Second Level</a></li>
-          </ul>
+  <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary">
+    <a class="navbar-brand" href="#"><span data-toggle="tooltip" data-placement="bottom" title="1.2.0">Fontstrap</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Link One</a></li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Options</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link Three</a>
+            <a class="dropdown-item" href="#">Link Four</a>
+            <a class="dropdown-item" href="#">Link Five</a>
+          </div>
         </li>
-        <li class="menu-item"><a href="#">First Level</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link Two</a></li>
       </ul>
-      <div class="pull-right">
+      <div class="mr-2">
         <button data-color="#000000" class="black navbar-btn btn btn-default body-color-change">Default</button>
         <button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"> </button>
         <button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"> </button>
@@ -84,29 +46,30 @@
       </div>
     </div>
   </div>
-  <div style="height: 70px;"></div>
+
+  <div style="height: 90px;"></div>
   <div class="container">
     <h1>Bicycle</h1>
-    
+
     <h1><i class="fa fa-bicycle text-info fa-3x"></i></h1>
-    
+
     <h1>Spin Cycle</h1>
-    
+
     <span class="fa-stack fa-5x">
       <i class="fa fa-square fa-spin fa-stack-2x"></i>
       <i class="fa fa-motorcycle fa-stack-1x text-danger"></i>
     </span>
-    
+
     <span class="fa-stack fa-5x">
       <i class="fa fa-circle-thin fa-stack-2x text-success"></i>
       <i class="fa fa-hand-rock-o fa-spin fa-stack-1x text-warning"></i>
     </span>
-    
+
     <h2>Futbol</h2>
     <h2><i class="fa fa-futbol-o text-success fa-3x"></i></h2>
-    
+
     <h3>Top Secret</h3>
-    <p>
+    <p class="code-sequence">
       <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x"></i></span>
       <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x"></i></span>
       <span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-down fa-stack-1x"></i></span>
@@ -122,27 +85,28 @@
     <p>Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.</p>
     <p>Magna ad, mauris sit quisque amet porta rutrum nunc, in justo metus fringilla pellentesque venenatis, metus eget praesent, blanditiis maecenas suscipit aliquam nec placerat. Potenti erat dolor sit lobortis, pellentesque sit vestibulum commodo at mauris ipsum, wisi justo nulla leo feugiat nonummy, non non porta tortor et elit quis, ut lectus lorem rhoncus. Ut ligula fusce enim lectus condimentum, wisi magna et, suspendisse lacus lobortis, mi vulputate suspendisse eget vestibulum enim. Nam parturient, fermentum semper, sed parturient sed vitae consequat. Eget metus felis dictum, vulputate et morbi molestie. Consequat etiam arcu amet bibendum aenean eu, egestas lacus sed fusce arcu id sociis. Id nulla est morbi sed eu in, neque nullam eros amet vestibulum ornare odio, dignissim adipiscing, in nunc tincidunt ut mattis quis. Consectetuer enim nullam. Fermentum malesuada adipiscing ridiculus morbi sed, in ultrices nulla, erat id cursus, risus litora. Lacus egestas pede accumsan augue euismod, posuere nunc ullamcorper maecenas consectetuer et, aenean in at dui justo lacus ullamcorper. Eros aenean ante erat posuere, sit amet pellentesque.</p>
   </div>
-  
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <script src="http://dev.nretnil.com/staging/tools/fontstrap/js/jquery.min.js"></script>
+  <script src="http://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.js"></script>
 
   <script>
     $('.body-color-change').click(function(){
       var color = $(this).data("color");
       $('body').css('color',color);
     });
-    
+
     // Multiple Layer Menu
     $(document).ready(function() {
       $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
         // Avoid following the href location when clicking
-        event.preventDefault(); 
+        event.preventDefault();
         // Avoid having the menu to close when clicking
-        event.stopPropagation(); 
+        event.stopPropagation();
         // opening the one you clicked on
         $(this).parent().toggleClass('open');
       });
     });
-    
+
     // Konami Code
     var up = {code:38,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x"></i></span>'};
     var down = {code:40,show:'<span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-arrow-down fa-stack-1x"></i></span>'};
@@ -159,25 +123,18 @@
         e.preventDefault();
         current++;
         if ( current == sequence.length ) {
-          $("span.fa-stack:nth-child("+current+")").css("color","orange");
-          alert('Secret'); 
           current = 0;
-          $('.current-btn').html(sequence[0].show);
           $("span.fa-stack").removeAttr("style");
+          setTimeout(function () { alert('Secret'); }, 200);
         } else {
-          $('.current-btn').html(sequence[current].show);
-          $("span.fa-stack:nth-child("+current+")").css("color","orange");
+          $(".code-sequence span.fa-stack:nth-child("+current+")").css("color","orange");
         }
       }else{
         current = 0;
-        $('.current-btn').html(sequence[0].show);
-        $("span.fa-stack").removeAttr("style");
+        $(".code-sequence span.fa-stack").removeAttr("style");
       }
     });
   </script>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 </html>
