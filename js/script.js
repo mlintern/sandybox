@@ -163,6 +163,7 @@ editor.setTheme("ace/theme/monokai");
 session.setMode("ace/mode/html");
 session.setTabSize(2);
 renderer.setShowPrintMargin(false);
+editor.setShowInvisibles(true);
 
 // Activate Chosen
 $(".chosen-select").chosen({width: "100%"});
