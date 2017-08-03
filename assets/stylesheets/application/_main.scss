@@ -1,9 +1,10 @@
 $white: #fff;
 $blue: #193878;
 $black: #000;
+$danger: #d9534f;
 
 body {
-  background-color: $white;
+  background-color: $danger;
   cursor: default;
   margin: 0;
   padding: 0;
@@ -89,17 +90,25 @@ body {
       float: right;
       padding: 7px 15px;
     }
-  }
-}
 
-.footer {
-  border-top: 2px solid $blue;
-  bottom: 0;
-  color: $white;
-  font-size: 12px;
-  line-height: 1;
-  padding: 10px 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
+    .navbar-header {
+      line-height: 1;
+
+      .navbar-brand {
+        line-height: 1;
+      }
+    }
+  }
+
+  .footer {
+    border-top: 2px solid $blue;
+    bottom: 0;
+    color: $white;
+    font-size: 12px;
+    line-height: 1;
+    padding: 10px 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
 }
