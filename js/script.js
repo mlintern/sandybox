@@ -57,6 +57,14 @@ function download_html() {
 	return true;
 }
 
+function setHeight() {
+	var windowHeight = $(window).outerHeight();
+	var navbarHeight = $('.navbar').outerHeight();
+	var footerHeight = $('.footer').outerHeight();
+	var newContentHeight = windowHeight - footerHeight - navbarHeight;
+	$('.content-section, .editor-menu').css({'height': newContentHeight});
+}
+
 $(document).ready(function() {
 
 	setTimeout(function(){runCode();},1000);
@@ -155,6 +163,12 @@ $(document).ready(function() {
 			$(".navbar").removeAttr('style');
 		}
 	});
+
+	$(window).resize(function () {
+		setHeight();
+	});
+
+	setHeight();
 
 });
 
