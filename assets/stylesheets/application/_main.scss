@@ -82,7 +82,9 @@ body {
   }
 
   .navbar {
+    line-height: 1;
     margin-bottom: 0;
+    padding: 0 1rem;
 
     .version {
       color: $white;
@@ -91,12 +93,12 @@ body {
       padding: 7px 15px;
     }
 
-    .navbar-header {
+    .navbar-brand {
       line-height: 1;
+    }
 
-      .navbar-brand {
-        line-height: 1;
-      }
+    .btn:focus {
+      box-shadow: none;
     }
   }
 

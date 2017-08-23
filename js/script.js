@@ -2,6 +2,10 @@ var editor = ace.edit("editor");
 var session = editor.getSession();
 var renderer = editor.renderer;
 
+$.get( "html-sandbox.html", function( data ) {
+	session.setValue(data);
+});
+
 function updateWrap() {
 	var value = $("select[name=wrap] option:selected").val();
 	switch (value) {
