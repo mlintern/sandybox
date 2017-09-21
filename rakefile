@@ -3,15 +3,10 @@
 
 namespace :sass do
   task :compile do
-    # system 'sass assets/stylesheets/_full.scss css/fa-bs.css'
-    system 'sass assets/stylesheets/_full.scss css/fa-bs.min.css --style compressed'
-  end
-
-  task :fonts do
-    FileUtils.copy_entry 'assets/fonts', 'fonts/'
+    system 'sass assets/stylesheets/_application.scss:css/application.min.css --style compressed'
   end
 
   task :watch do
-    system 'sass --watch assets/stylesheets/_full.scss:css/fa-bs.min.css --style compressed'
+    system 'sass --watch assets/stylesheets/_application.scss:css/application.min.css --style compressed'
   end
 end
