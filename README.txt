@@ -13,9 +13,11 @@ gem install sass
 ### Complie Sass
 
 ```
-sass assets/stylesheets/_full.scss css/fa-bs.min.css --style compressed
+sass assets/stylesheets/_application.scss css/application.min.css --style compressed
 ```
 or
 ```
 rake sass:compile
 ```
+
+New Versions of Ace can be found Here: https://github.com/ajaxorg/ace-builds/releases
