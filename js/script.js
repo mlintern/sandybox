@@ -2,9 +2,14 @@ var editor = ace.edit("editor");
 var session = editor.getSession();
 var renderer = editor.renderer;
 
-$.get( "html-sandbox.html", function( data ) {
-	session.setValue(data);
-});
+
+var default_html = function () {
+	$.get( "html-sandbox.html", function( data ) {
+		session.setValue(data);
+	});
+};
+
+default_html();
 
 function updateWrap() {
 	var value = $("select[name=wrap] option:selected").val();
@@ -75,9 +80,10 @@ $(document).ready(function() {
 
 	session.on('change', function(e) {
 		runCode();
+		// Add Update Storage Here
 	});
 
-	$('.reset').bind('click', function() {
+	$('.refresh').bind('click', function() {
 		$('#preview').remove();
 		$('.preview-pane').append('<iframe name="preview" id="preview" src=""></iframe>');
 		$('.fa.fa-refresh').addClass('fa-spin');
@@ -85,6 +91,10 @@ $(document).ready(function() {
 			runCode();
 			$('.fa.fa-refresh').removeClass('fa-spin');
 		}, 500);
+	});
+
+	$('.reset').bind('click', function() {
+		default_html();
 	});
 
 	$('.menuToggle').bind('click', function() {
