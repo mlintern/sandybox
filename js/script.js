@@ -2,14 +2,29 @@ var editor = ace.edit("editor");
 var session = editor.getSession();
 var renderer = editor.renderer;
 
+var SANDYBOX_STORAGE_NAME = 'sandybox_html';
+
+var save_html = _.throttle(function () {
+	storage.save(SANDYBOX_STORAGE_NAME, editor.getValue());
+}, 5000, { 'trailing': true, 'leading': true });
+
+var get_html = function () {
+	var code = storage.get(SANDYBOX_STORAGE_NAME);
+	session.setValue(code);
+};
 
 var default_html = function () {
 	$.get( "html-sandbox.html", function( data ) {
 		session.setValue(data);
+		storage.save(SANDYBOX_STORAGE_NAME, data);
 	});
 };
 
-default_html();
+if (storage.get(SANDYBOX_STORAGE_NAME) === null) {
+	default_html();
+} else {
+	get_html();
+}
 
 function updateWrap() {
 	var value = $("select[name=wrap] option:selected").val();
@@ -80,7 +95,7 @@ $(document).ready(function() {
 
 	session.on('change', function(e) {
 		runCode();
-		// Add Update Storage Here
+		save_html();
 	});
 
 	$('.refresh').bind('click', function() {
@@ -204,6 +219,7 @@ var clipboard = new Clipboard('.btn-copy', {
 		return html_code;
 	}
 });
+
 clipboard.on('success', function(e) {
 	$('.menu-alert').show();
 	$('.menu-alert').removeClass('alert-danger');
