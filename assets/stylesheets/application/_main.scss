@@ -10,14 +10,33 @@ body {
   padding: 0;
 }
 
-#container {
+button {
+  cursor: pointer;
+}
+
+.offcanvas-menu {
+
+  .chosen-container-single {
+
+    a {
+      height: 38px;
+      padding: 6px;
+
+      div {
+        top: 7px;
+      }
+    }
+  }
+}
+
+.offcanvas-main-content {
   overflow: hidden;
 
   .content-section {
     height: 90%;
     left: 0%;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     width: 100%;
 
     .content {
@@ -47,38 +66,9 @@ body {
     }
   }
 
-  .editor-menu {
-    background-color: $white;
-    border-right: 2px solid $black;
-    display: none;
-    height: 90%;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 0%;
-
-    &.open {
-      display: block;
-    }
-  }
-
   .tall {
     height: 98%;
     top: 5px;
-  }
-
-  .menu-container {
-    padding: 40px 20px 20px;
-
-    .menu-alert {
-      display: none;
-    }
-
-    .close-menu {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-    }
   }
 
   .navbar {
@@ -91,10 +81,6 @@ body {
       display: inline-block;
       float: right;
       padding: 7px 15px;
-    }
-
-    .menuToggle {
-      cursor: pointer;
     }
 
     .navbar-brand {

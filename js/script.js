@@ -91,6 +91,8 @@ function setHeight() {
 
 $(document).ready(function() {
 
+	$('.offcanvas-menu').offcanvasMenu();
+
 	setTimeout(function(){runCode();},1000);
 
 	session.on('change', function(e) {
@@ -110,24 +112,6 @@ $(document).ready(function() {
 
 	$('.reset').bind('click', function() {
 		default_html();
-	});
-
-	$('.menuToggle').bind('click', function() {
-		if ( $('.editor-menu').hasClass('open') ) {
-			$('.editor-menu').animate({width:'0%'});
-			$('.content-section').animate({width:'100%',left:'0%'},updateWrap);
-			setTimeout(function () {$('.editor-menu').removeClass('open'); },380);
-		}else{
-			$('.editor-menu').addClass('open');
-			$('.content-section').animate({width:'80%',left:'20%'});
-			$('.editor-menu').animate({width:'20%'},updateWrap);
-		}
-	});
-
-	$('.close-menu').bind('click', function() {
-		$('.editor-menu').animate({width:'0%'});
-		$('.content-section').animate({width:'100%',left:'0%'},updateWrap);
-		setTimeout(function () {$('.editor-menu').removeClass('open'); },380);
 	});
 
 	$('.all-code').bind('click', function() {
@@ -160,13 +144,13 @@ $(document).ready(function() {
 		editor.setTheme("ace/theme/"+theme);
 	});
 
-	$("select[name=font-size]").change(function(){
-		var font_size = $("select[name=font-size] option:selected").val();
+	$("input[name=font-size]").change(function(){
+		var font_size = $("input[name=font-size]").val();
 		document.getElementById('editor').style.fontSize=font_size+'px';
 	});
 
-	$("select[name=tab-size]").change(function(){
-		var tab_size = $("select[name=tab-size] option:selected").val();
+	$("input[name=tab-size]").change(function(){
+		var tab_size = $("input[name=tab-size]").val();
 		editor.getSession().setTabSize(tab_size);
 	});
 
@@ -176,21 +160,6 @@ $(document).ready(function() {
 
 	$("select[name=wrap]").change(function(){
 		updateWrap();
-	});
-
-	$("input[name=autoHide]").change(function(){
-		if ($(this).is(":checked")){
-			$('.navbar').addClass('navbar-auto-hide navbar-fixed-top');
-			$('.content-section').addClass('tall');
-			$('.editor-menu').addClass('tall');
-			$(".navbar-auto-hide").autoHide({show_height: 3,delay: 100,slide_speed: 100});
-		} else {
-			$(".navbar-auto-hide").unbind();
-			$('.navbar').removeClass('navbar-auto-hide navbar-fixed-top');
-			$('.content-section').removeClass('tall');
-			$('.editor-menu').removeClass('tall');
-			$(".navbar").removeAttr('style');
-		}
 	});
 
 	$(window).resize(function () {

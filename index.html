@@ -11,156 +11,135 @@
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <script src="js/jquery.min.js?v=3.2.1" type="text/javascript"></script>
-
 </head>
 <body>
 
-  <div id="container">
+  <div class="offcanvas-menu bg-light">
+    <div class="offcanvas-menu-header clearfix">
+      <button class="py-3 px-4 menu-lock-toggle"><i class="fa fa-unlock"></i></button>
+      <button class="pull-right offcanvas-menu-toggle py-3 px-4"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="offcanvas-menu-body p-4">
+      <div class="alert menu-alert text-center m-0"></div>
+
+      <div class="form-group row">
+        <div class="col-12">
+          <button class="btn btn-warning btn-block btn-copy btn-sm"><i class="fa fa-clipboard"></i> Copy Code</button>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Theme:</label>
+        <div class="col-sm-8">
+          <select name="theme" class="theme form-control chosen-select">
+            <option value="ambiance">Ambiance</option>
+            <option value="chaos">Chaos</option>
+            <option value="chrome">Chrome</option>
+            <option value="clouds">Clouds</option>
+            <option value="clouds_midnight">Clouds Midnight</option>
+            <option value="cobalt">Cobalt</option>
+            <option value="crimson_editor">Crimson Editor</option>
+            <option value="dawn">Dawn</option>
+            <option value="dreamweaver">Dreamweaver</option>
+            <option value="eclipse">Eclipse</option>
+            <option value="github">GitHub</option>
+            <option value="gob">GOB</option>
+            <option value="gruvbox">Gruvbox</option>
+            <option value="idle_fingers">Idle Fingers</option>
+            <option value="iplastic">iPlastic</option>
+            <option value="katzenmilch">Katzenmilch</option>
+            <option value="kr_theme">KR</option>
+            <option value="kuroir">Kuroir</option>
+            <option value="merbivore">Merbivore</option>
+            <option value="merbivore_soft">Merbivore Soft</option>
+            <option value="mono_industrial">Mono Industrial</option>
+            <option value="monokai" selected>Monokai</option>
+            <option value="pastel_on_dark">Pastel On Dark</option>
+            <option value="solarized_dark">Solarized Dark</option>
+            <option value="solarized_light">Solarized Light</option>
+            <option value="sqlserver">SQL Server</option>
+            <option value="terminal">Terminal</option>
+            <option value="textmate">Textmate</option>
+            <option value="tomorrow">Tomorrow</option>
+            <option value="tomorrow_night_blue">Tomorrow Night Blue</option>
+            <option value="tomorrow_night_bright">Tomorrow Night Bright</option>
+            <option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
+            <option value="tomorrow_night">Tomorrow Night</option>
+            <option value="twilight">Twilight</option>
+            <option value="vibrant_ink">Vibrant Ink</option>
+            <option value="xcode">Xcode</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Font Size:</label>
+        <div class="col-sm-8">
+          <div class="input-group">
+            <input type="number" name="font-size" min="10" max="30" class="form-control" value="12">
+            <div class="input-group-addon">px</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Wrap:</label>
+        <div class="col-sm-8">
+          <select name="wrap" class="form-control chosen-select">
+            <option value="off" selected>Off</option>
+            <option value="40">40 Chars</option>
+            <option value="80">80 Chars</option>
+            <option value="free">Free</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Tab:</label>
+        <div class="col-sm-8">
+          <div class="input-group">
+            <input type="number" name="tab-size" min="1" max="10" class="form-control" value="2">
+            <div class="input-group-addon">spaces</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-12">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="showInvisibles" checked> Show Invisibles
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-12">Download Your Code</label>
+        <div class="col-sm-12"><input id="filename" class="form-control" type="text" val="" placeholder="filename"></div>
+      </div>
+      <button type="submit" class="btn btn-info btn-sm" onclick="download_html();"><i class="fa fa-download"></i> Download</button>
+
+    </div>
+  </div>
+
+  <div class="offcanvas-main-content">
 
     <div class="navbar navbar-dark bg-danger">
         <span class="navbar-text mr-3">
-          <div title="Toggle Menu" class="menuToggle d-inline-block text-white"><i class="fa fa-bars fa-lg"></i></div>
+          <div title="Toggle Menu" class="offcanvas-menu-toggle menuToggle d-inline-block text-white"><i class="fa fa-bars fa-lg"></i></div>
         </span>
         <div class="navbar-brand drop-down-toggle text-white pointer">Nretnil Sandybox</div>
         <span class="navbar-text mr-auto">
           <button title="Refresh" class="refresh btn navbar-btn btn-success btn-sm" style="margin-left: 10px;"><i class="fa fa-refresh"></i></button>
           <button title="Reset" class="reset btn navbar-btn btn-warning btn-sm" style="margin-left: 10px;"><i class="fa fa-repeat"></i></button>
         </span>
-        <span class="version navbar-text">v17.9.25</span>
+        <span class="version navbar-text">v17.9.27</span>
         <div class="btn-group navbar-btn-group btn-sm float-right">
           <button title="Editor" class="screen-ctrl btn all-code btn-primary navbar-btn btn-sm"><i class="fa fa-terminal"></i></button>
           <button title="Split Screen" class="screen-ctrl btn split btn-primary btn-warning navbar-btn btn-sm"><i class="fa fa-columns"></i></button>
           <button title="Viewer" class="screen-ctrl btn all-display btn-primary navbar-btn btn-sm"><i class="fa fa-list-alt"></i></button>
         </div>
-    </div>
-
-    <div class="editor-menu form-horizontal">
-      <div class='menu-container'>
-
-        <div class="alert menu-alert text-center"></div>
-
-        <i class="fa fa-window-close pointer close-menu fa-lg"></i>
-
-        <div class="form-group row">
-          <div class="col-12">
-            <button class="btn btn-warning btn-copy btn-sm"><i class="fa fa-clipboard"></i> Copy Code</button>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class="col-sm-4 x-control-label">Theme:</label>
-          <div class="col-sm-8">
-            <select name="theme" class="theme form-control chosen-select">
-              <option value="ambiance">Ambiance</option>
-              <option value="chaos">Chaos</option>
-              <option value="chrome">Chrome</option>
-              <option value="clouds">Clouds</option>
-              <option value="clouds_midnight">Clouds Midnight</option>
-              <option value="cobalt">Cobalt</option>
-              <option value="crimson_editor">Crimson Editor</option>
-              <option value="dawn">Dawn</option>
-              <option value="dreamweaver">Dreamweaver</option>
-              <option value="eclipse">Eclipse</option>
-              <option value="github">GitHub</option>
-              <option value="gob">GOB</option>
-              <option value="gruvbox">Gruvbox</option>
-              <option value="idle_fingers">Idle Fingers</option>
-              <option value="iplastic">iPlastic</option>
-              <option value="katzenmilch">Katzenmilch</option>
-              <option value="kr_theme">KR</option>
-              <option value="kuroir">Kuroir</option>
-              <option value="merbivore">Merbivore</option>
-              <option value="merbivore_soft">Merbivore Soft</option>
-              <option value="mono_industrial">Mono Industrial</option>
-              <option value="monokai" selected>Monokai</option>
-              <option value="pastel_on_dark">Pastel On Dark</option>
-              <option value="solarized_dark">Solarized Dark</option>
-              <option value="solarized_light">Solarized Light</option>
-              <option value="sqlserver">SQL Server</option>
-              <option value="terminal">Terminal</option>
-              <option value="textmate">Textmate</option>
-              <option value="tomorrow">Tomorrow</option>
-              <option value="tomorrow_night_blue">Tomorrow Night Blue</option>
-              <option value="tomorrow_night_bright">Tomorrow Night Bright</option>
-              <option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
-              <option value="tomorrow_night">Tomorrow Night</option>
-              <option value="twilight">Twilight</option>
-              <option value="vibrant_ink">Vibrant Ink</option>
-              <option value="xcode">Xcode</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class="col-sm-4 x-control-label">Font:</label>
-          <div class="col-sm-8">
-            <select name="font-size" class="form-control chosen-select">
-              <option value="10">10px</option>
-              <option value="11">11px</option>
-              <option value="12" selected>12px</option>
-              <option value="13">13px</option>
-              <option value="14">14px</option>
-              <option value="16">16px</option>
-              <option value="18">18px</option>
-              <option value="20">20px</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class="col-sm-4 x-control-label">Wrap:</label>
-          <div class="col-sm-8">
-            <select name="wrap" class="form-control chosen-select">
-              <option value="off" selected>Off</option>
-              <option value="40">40 Chars</option>
-              <option value="80">80 Chars</option>
-              <option value="free">Free</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class="col-sm-4 x-control-label">Tab:</label>
-          <div class="col-sm-8">
-            <select name="tab-size" class="form-control chosen-select">
-              <option value="1">1 space</option>
-              <option value="2" selected>2 space</option>
-              <option value="3">3 space</option>
-              <option value="4">4 space</option>
-              <option value="5">5 space</option>
-              <option value="6">6 space</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <div class="col-sm-12">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="showInvisibles" checked> Show Invisibles
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <div class="col-sm-12">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="autoHide"> Auto Hide Navbar
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class="col-sm-12">Download Your Code</label>
-          <div class="col-sm-12"><input id="filename" class="form-control" type="text" val="" placeholder="filename"></div>
-        </div>
-        <button type="submit" class="btn btn-info btn-sm" onclick="download_html();"><i class="fa fa-download"></i> Download</button>
-
-      </div>
     </div>
 
     <div class="content-section">
@@ -199,21 +178,23 @@
 &lt;/body&gt;
 &lt;/html&gt;</div> <!-- #editor -->
 
-        </div>
-      </div>
+        </div> <!-- .content -->
+      </div> <!-- .content-section -->
 
       <div class="preview-pane">
         <iframe name="preview" id="preview" src=""></iframe>
       </div>
-    </div>
+    </div> <!-- .content-section -->
 
     <div class="footer">
       &copy; 2017 Nretnil Apps
     </div>
-  </div>
 
+  </div> <!-- offcanvas-main-content -->
+
+  <script src="js/jquery.min.js?v=3.2.1" type="text/javascript"></script>
   <script src="js/fontstrap.min.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
-  <script src="https://dev.nretnil.com/staging/tools/js/chosen_v1/chosen.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/chosen.jquery.min.js?v=1.8.2" type="text/javascript" charset="utf-8"></script>
   <script src="js/src-min-noconflict/ace.js?v=1.2.8" type="text/javascript" charset="utf-8"></script>
   <script src="https://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js?v=1.1.1" type="text/javascript" charset="utf-8"></script>
   <script src="js/clipboard.min.js?v=1.5.8" type="text/javascript" charset="utf-8"></script>
