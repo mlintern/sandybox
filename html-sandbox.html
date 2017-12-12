@@ -1,173 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Website Title</title>
-  <meta charset="UTF-8">
+	<title>Website Title</title>
+	<meta charset="UTF-8">
 
-  <link rel="stylesheet" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css?v=2.0.1">
+	<link rel="stylesheet" href="https://dev.nretnil.com/staging/tools/fontstrap/css/fontstrap.min.css?v=2.0.1">
 
-  <style>
-    .black:focus{outline-color:#000000;}
-    .red:focus{outline-color:#d9534f;}
-    .blue:focus{outline-color:#428bca;}
-    .orange:focus{outline-color:#f0ad4e;}
-    .green:focus{outline-color:#5cb85c;}
-    .aqua:focus{outline-color:#5bc0de;}
-    .fa strong {Font-Family: Arial;}
-    .fa.fa-caret-right{top: 3px;position: relative;}
-  </style>
+	<style>
+		.black:focus{outline-color:#000000;}
+		.red:focus{outline-color:#d9534f;}
+		.blue:focus{outline-color:#428bca;}
+		.orange:focus{outline-color:#f0ad4e;}
+		.green:focus{outline-color:#5cb85c;}
+		.aqua:focus{outline-color:#5bc0de;}
+		.fa.fa-caret-right{top: 3px;position: relative;}
+		.fa-text { display: inline-block; }
+	</style>
 </head>
 <body>
-  <div class="offcanvas-menu bg-secondary">
-    <div class="offcanvas-menu-header clearfix">
-      <button class="py-3 px-4 text-white menu-lock-toggle"><i class="fa fa-unlock"></i></button>
-      <button class="float-right offcanvas-menu-toggle py-3 px-4 text-white"><i class="fa fa-times"></i></button>
-    </div>
-    <ul>
-      <li><a href="#"><i class="fa fa-home fa-fw mr-2"></i> Home</a></li>
-      <li class='submenu-toggle'>
-        <a href='#'><i class="fab fa-medium fa-fw mr-2"></i> Main</a>
-        <ul class="submenu">
-          <li><a target="_blank" href="https://v4-alpha.getbootstrap.com"><span data-toggle="tooltip" data-placement="right" title="4.0.0-beta"><i class="fa fa-text fa-fw mr-2">B</i> Bootstrap</span></a></li>
-          <li><a target="_blank" href="http://fontawesome.io"><span data-toggle="tooltip" data-placement="right" title="4.7.0"><i class="fa fa-font-awesome fa-fw mr-2"></i> Font Awesome</span></a></li>
-        </ul>
-      </li>
-      <li class='submenu-toggle'>
-        <a href='#'><i class="fa fa-text-width fa-fw mr-2"></i> Third Party</a>
-        <ul class="submenu">
-          <li><a target="_blank" href="http://jquery.com"><span data-toggle="tooltip" data-placement="right" title="3.2.1"><i class="fa fa-text fa-fw mr-2">JQ</i> jQuery</span></a></li>
-          <li><a target="_blank" href="https://lodash.com"><span data-toggle="tooltip" data-placement="right" title="4.17.4"><i class="fa fa-text fa-fw mr-2">L</i> Lodash.js</span></a></li>
-          <li><a target="_blank" href="https://popper.js.org"><span data-toggle="tooltip" data-placement="right" title="1.11.0"><i class="fa fa-text fa-fw mr-2">P</i> Popper.js</span></a></li>
-        </ul>
-      </li>
-      <li><a href="#"><i class="fa-text fa-fw mr-2">A</i> About</a></li>
-    </ul>
-  </div>
+	<div class="offcanvas-menu bg-secondary">
+		<div class="offcanvas-menu-header clearfix">
+			<button class="py-3 px-4 text-white menu-lock-toggle"><i class="fa fa-unlock"></i></button>
+			<button class="float-right offcanvas-menu-toggle py-3 px-4 text-white"><i class="fa fa-times"></i></button>
+		</div>
+		<ul>
+			<li><a href="#"><i class="fa fa-home fa-fw fa-lg mr-2"></i> Home</a></li>
+			<li class='submenu-toggle'>
+				<a href='#'><i class="fab fa-medium fa-fw fa-lg mr-2"></i>Main<i class="offcanvas-menu-secondary-closed fa fa-caret-right float-right"></i><i class="offcanvas-menu-secondary-open fa fa-caret-down float-right"></i></a>
+				<ul class="submenu">
+					<li><a target="_blank" href="https://getbootstrap.com"><span data-toggle="tooltip" data-placement="right" title="4.0.0-beta.2"><i class="fa-text fa-fw fa-lg mr-2">B</i> Bootstrap</span></a></li>
+					<li><a target="_blank" href="http://fontawesome.io"><span data-toggle="tooltip" data-placement="right" title="5.0.1"><i class="fab fa-font-awesome fa-fw fa-lg mr-2"></i> Font Awesome</span></a></li>
+				</ul>
+			</li>
+			<li class='submenu-toggle'>
+				<a href='#'><i class="fa fa-text-width fa-fw mr-2"></i> Third Party <i class="offcanvas-menu-secondary-closed fa fa-caret-right float-right"></i><i class="offcanvas-menu-secondary-open fa fa-caret-down float-right"></i></a>
+				<ul class="submenu">
+					<li><a target="_blank" href="http://jquery.com"><span data-toggle="tooltip" data-placement="right" title="3.2.1"><i class="fa-text fa-fw fa-lg mr-2">JQ</i> jQuery</span></a></li>
+					<li><a target="_blank" href="https://lodash.com"><span data-toggle="tooltip" data-placement="right" title="4.17.4"><i class="fa-text fa-fw fa-lg mr-2">L</i> Lodash.js</span></a></li>
+					<li><a target="_blank" href="https://popper.js.org"><span data-toggle="tooltip" data-placement="right" title="1.12.5"><i class="fa-text fa-fw fa-lg mr-2">P</i> Popper.js</span></a></li>
+				</ul>
+			</li>
+			<li><a href="#"><i class="fa-text fa-fw fa-lg mr-2">A</i> About</a></li>
+		</ul>
+	</div>
 
-  <div class="offcanvas-main-content">
+	<div class="offcanvas-main-content">
 
-    <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary">
-      <span class="navbar-text p-0 mr-3">
-        <i class="offcanvas-menu-toggle fa fa-bars fa-lg"></i>
-      </span>
-      <a class="navbar-brand" href="#">Fontstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        nav menu
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Link One</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Options</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Link Three</a>
-              <a class="dropdown-item" href="#">Link Four</a>
-              <a class="dropdown-item" href="#">Link Five</a>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Link Two</a></li>
-        </ul>
-        <div class="mr-2">
-          <button data-color="#000000" class="black navbar-btn btn btn-default body-color-change">Default</button>
-          <button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"> </button>
-          <button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"> </button>
-          <button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change"> </button>
-          <button data-color="#5cb85c" class="green navbar-btn btn btn-success body-color-change"> </button>
-          <button data-color="#5bc0de" class="aqua navbar-btn btn btn-info body-color-change"> </button>
-        </div>
-      </div>
-    </div>
+		<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary">
+			<span class="navbar-text p-0 mr-3">
+				<i class="offcanvas-menu-toggle fa fa-bars fa-lg"></i>
+			</span>
+			<a class="navbar-brand" href="#">Fontstrap</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				nav menu
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="#">Link One</a></li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Options</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Link Three</a>
+							<a class="dropdown-item" href="#">Link Four</a>
+							<a class="dropdown-item" href="#">Link Five</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Link Two</a></li>
+				</ul>
+				<div class="mr-2">
+					<button data-color="#000000" class="black navbar-btn btn btn-default body-color-change">Default</button>
+					<button data-color="#d9534f" class="red navbar-btn btn btn-danger body-color-change"> </button>
+					<button data-color="#428bca" class="blue navbar-btn btn btn-primary body-color-change"> </button>
+					<button data-color="#f0ad4e" class="orange navbar-btn btn btn-warning body-color-change"> </button>
+					<button data-color="#5cb85c" class="green navbar-btn btn btn-success body-color-change"> </button>
+					<button data-color="#5bc0de" class="aqua navbar-btn btn btn-info body-color-change"> </button>
+				</div>
+			</div>
+		</div>
 
-    <div style="height: 90px;"></div>
-    <div class="container">
-      <h1>Bicycle</h1>
+		<div style="height: 90px;"></div>
+		<div class="container">
+			<h1>Bicycle</h1>
 
-      <i class="fa fa-bicycle text-info fa-6x"></i>
+			<i class="fa fa-bicycle text-info fa-6x"></i>
 
-      <h1 class="mt-3">Spin Cycle</h1>
+			<h1 class="mt-3">Spin Cycle</h1>
 
-      <span class="fa-layers fa-5x">
-        <i class="fa fa-square fa-spin"></i>
-        <i class="fa fa-motorcycle text-danger" data-fa-transform="shrink-7 left-2"></i>
-      </span>
+			<span class="fa-layers fa-5x">
+				<i class="fa fa-square fa-spin"></i>
+				<i class="fa fa-motorcycle text-danger" data-fa-transform="shrink-7 left-2"></i>
+			</span>
 
-      <span class="fa-layers fa-5x">
-        <i class="far fa-circle  text-success"></i>
-        <i class="far fa-hand-rock fa-spin text-warning" data-fa-transform="shrink-7"></i>
-      </span>
+			<span class="fa-layers fa-5x">
+				<i class="far fa-circle  text-success"></i>
+				<i class="far fa-hand-rock fa-spin text-warning" data-fa-transform="shrink-7"></i>
+			</span>
 
-      <i class="fa fa-spinner fa-spin fa-5x"></i>
+			<i class="fa fa-spinner fa-spin fa-5x"></i>
 
-      <h2 class="mt-3">Futbol</h2>
-      <i class="far fa-futbol text-success fa-5x"></i>
+			<h2 class="mt-3">Futbol</h2>
+			<i class="far fa-futbol text-success fa-5x"></i>
 
-      <h2 class="mt-3">Calendar</h2>
-      <span class="fa-layers fa-fw fa-5x">
-        <i class="fas fa-calendar"></i>
-        <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3" style="font-weight:900">XX</span>
-      </span>
+			<h2 class="mt-3">Calendar</h2>
+			<span class="fa-layers fa-fw fa-5x">
+				<i class="fas fa-calendar"></i>
+				<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3" style="font-weight:900">XX</span>
+			</span>
 
-      <h3 class="mt-3">Top Secret</h3>
-      <p class="code-sequence">
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-up" data-fa-transform="shrink-7"></i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-up" data-fa-transform="shrink-7"></i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-down" data-fa-transform="shrink-7"></i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-down" data-fa-transform="shrink-7"></i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-left" data-fa-transform="shrink-7"></i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-right" data-fa-transform="shrink-7"></i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-left" data-fa-transform="shrink-7"></i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-right" data-fa-transform="shrink-7"></i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa-layers-text" data-fa-transform="shrink-7">B</i></span>
-        <span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa-layers-text" data-fa-transform="shrink-7">A</i></span>
-      </p>
-      <p>Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.</p>
-      <p>Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.</p>
-      <p>Magna ad, mauris sit quisque amet porta rutrum nunc, in justo metus fringilla pellentesque venenatis, metus eget praesent, blanditiis maecenas suscipit aliquam nec placerat. Potenti erat dolor sit lobortis, pellentesque sit vestibulum commodo at mauris ipsum, wisi justo nulla leo feugiat nonummy, non non porta tortor et elit quis, ut lectus lorem rhoncus. Ut ligula fusce enim lectus condimentum, wisi magna et, suspendisse lacus lobortis, mi vulputate suspendisse eget vestibulum enim. Nam parturient, fermentum semper, sed parturient sed vitae consequat. Eget metus felis dictum, vulputate et morbi molestie. Consequat etiam arcu amet bibendum aenean eu, egestas lacus sed fusce arcu id sociis. Id nulla est morbi sed eu in, neque nullam eros amet vestibulum ornare odio, dignissim adipiscing, in nunc tincidunt ut mattis quis. Consectetuer enim nullam. Fermentum malesuada adipiscing ridiculus morbi sed, in ultrices nulla, erat id cursus, risus litora. Lacus egestas pede accumsan augue euismod, posuere nunc ullamcorper maecenas consectetuer et, aenean in at dui justo lacus ullamcorper. Eros aenean ante erat posuere, sit amet pellentesque.</p>
-    </div>
+			<h3 class="mt-3">Top Secret</h3>
+			<p class="code-sequence">
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-up" data-fa-transform="shrink-7"></i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-up" data-fa-transform="shrink-7"></i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-down" data-fa-transform="shrink-7"></i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-down" data-fa-transform="shrink-7"></i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-left" data-fa-transform="shrink-7"></i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-right" data-fa-transform="shrink-7"></i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-left" data-fa-transform="shrink-7"></i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-right" data-fa-transform="shrink-7"></i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa-layers-text" data-fa-transform="shrink-7">B</i></span>
+				<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa-layers-text" data-fa-transform="shrink-7">A</i></span>
+			</p>
+			<p>Sed viverra augue tellus nulla sollicitudin scelerisque, scelerisque rutrum mauris pharetra tempor donec arcu, ante nunc ipsum donec nec dis vitae, ipsum tempor. Vel volutpat, sed vel imperdiet, vehicula auctor purus in, eu non tempor amet euismod ligula dictumst, massa orci posuere cras varius suscipit ac. Erat dui. Vitae purus suspendisse facilisi vivamus, ligula placerat pede lorem amet, sociosqu mauris, hendrerit mollis nulla in, sed at ante imperdiet. Nulla nonummy, purus pede at id sem morbi, pariatur aliquet massa donec suspendisse mi, integer malesuada velit aenean.</p>
+			<p>Wisi nulla at ut ornare, risus elit convallis orci volutpat quam scelerisque. Vestibulum pretium scelerisque. Pulvinar placerat id dictum eros a, sed facilisi vulputate ut integer, nec lacinia magna dolore dolor lacus, sed scelerisque vel dolor adipiscing sagittis. Natus urna a faucibus eu iaculis consectetuer, vivamus massa sed, vel et, morbi rhoncus nibh, etiam wisi iaculis amet dolor pharetra nisl. Amet ante rhoncus leo vel dictum, morbi duis massa, pretium amet vitae, eleifend laoreet mattis id imperdiet integer.</p>
+			<p>Magna ad, mauris sit quisque amet porta rutrum nunc, in justo metus fringilla pellentesque venenatis, metus eget praesent, blanditiis maecenas suscipit aliquam nec placerat. Potenti erat dolor sit lobortis, pellentesque sit vestibulum commodo at mauris ipsum, wisi justo nulla leo feugiat nonummy, non non porta tortor et elit quis, ut lectus lorem rhoncus. Ut ligula fusce enim lectus condimentum, wisi magna et, suspendisse lacus lobortis, mi vulputate suspendisse eget vestibulum enim. Nam parturient, fermentum semper, sed parturient sed vitae consequat. Eget metus felis dictum, vulputate et morbi molestie. Consequat etiam arcu amet bibendum aenean eu, egestas lacus sed fusce arcu id sociis. Id nulla est morbi sed eu in, neque nullam eros amet vestibulum ornare odio, dignissim adipiscing, in nunc tincidunt ut mattis quis. Consectetuer enim nullam. Fermentum malesuada adipiscing ridiculus morbi sed, in ultrices nulla, erat id cursus, risus litora. Lacus egestas pede accumsan augue euismod, posuere nunc ullamcorper maecenas consectetuer et, aenean in at dui justo lacus ullamcorper. Eros aenean ante erat posuere, sit amet pellentesque.</p>
+		</div>
 
-  </div>
+	</div>
 
-  <script src="https://dev.nretnil.com/staging/tools/fontstrap/js/jquery.min.js?v=3.2.1"></script>
-  <script src="https://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.min.js?v=2.0.1"></script>
+	<script src="https://dev.nretnil.com/staging/tools/fontstrap/js/jquery.min.js?v=3.2.1"></script>
+	<script src="https://dev.nretnil.com/staging/tools/fontstrap/js/fontstrap.min.js?v=2.0.1"></script>
 
-  <script>
-    $('.body-color-change').click(function(){
-      var color = $(this).data("color");
-      $('body').css('color',color);
-    });
+	<script>
+		$('.body-color-change').click(function(){
+			var color = $(this).data("color");
+			$('body').css('color',color);
+		});
 
-    $(window).on('load', function() {
-      $('.offcanvas-menu').offcanvasMenu();
-    });
+		$(window).on('load', function() {
+			$('.offcanvas-menu').offcanvasMenu();
+		});
 
-    // Konami Code
-    var up = { code:38, show:'<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-up"></i></span>' };
-    var down = { code:40, show:'<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-down"></i></span>' };
-    var right = { code:39, show:'<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-right"></i></span>' };
-    var left = { code:37, show:'<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-left"></i></span>' };
-    var a = { code:65, show:'<span class="fa-layers fa-2x"><i class="fa fa-circle-thin"></i><i class="fa"><strong>a</strong></i></span>' };
-    var b = { code:66, show:'<span class="fa-layers fa-2x"><i class="fa fa-circle-thin"></i><i class="fa"><strong>b</strong></i></span>' };
+		// Konami Code
+		var up = { code:38, show:'<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-up"></i></span>' };
+		var down = { code:40, show:'<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-down"></i></span>' };
+		var right = { code:39, show:'<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-right"></i></span>' };
+		var left = { code:37, show:'<span class="fa-layers fa-2x"><i class="far fa-square"></i><i class="fa fa-arrow-left"></i></span>' };
+		var a = { code:65, show:'<span class="fa-layers fa-2x"><i class="fa fa-circle-thin"></i><i class="fa"><strong>a</strong></i></span>' };
+		var b = { code:66, show:'<span class="fa-layers fa-2x"><i class="fa fa-circle-thin"></i><i class="fa"><strong>b</strong></i></span>' };
 
-    var sequence = [up,up,down,down,left,right,left,right,b,a];
-    var current = 0;
+		var sequence = [up,up,down,down,left,right,left,right,b,a];
+		var current = 0;
 
-    $(document).keydown(function(e){
-      if ( e.keyCode == sequence[current].code ) {
-        e.preventDefault();
-        current++;
-        if ( current == sequence.length ) {
-          current = 0;
-          $("span.fa-layers").removeAttr("style");
-          setTimeout(function () { alert('Secret'); }, 200);
-        } else {
-          $(".code-sequence span.fa-layers:nth-child("+current+")").css("color","orange");
-        }
-      }else{
-        current = 0;
-        $(".code-sequence span.fa-layers").removeAttr("style");
-      }
-    });
-  </script>
+		$(document).keydown(function(e){
+			if ( e.keyCode == sequence[current].code ) {
+				e.preventDefault();
+				current++;
+				if ( current == sequence.length ) {
+					current = 0;
+					$("span.fa-layers").removeAttr("style");
+					setTimeout(function () { alert('Secret'); }, 200);
+				} else {
+					$(".code-sequence span.fa-layers:nth-child("+current+")").css("color","orange");
+				}
+			}else{
+				current = 0;
+				$(".code-sequence span.fa-layers").removeAttr("style");
+			}
+		});
+	</script>
 
 </body>
 </html>
