@@ -21,8 +21,10 @@ var default_html = function () {
 };
 
 if (storage.get(SANDYBOX_STORAGE_NAME) === null) {
+	console.log('Using Default HTML');
 	default_html();
 } else {
+	console.log('Using Saved HTML');
 	get_html();
 }
 
@@ -79,14 +81,6 @@ function download_html() {
 
 	download(name, html_code);
 	return true;
-}
-
-function setHeight() {
-	var windowHeight = $(window).outerHeight();
-	var navbarHeight = $('.navbar').outerHeight();
-	var footerHeight = $('.footer').outerHeight();
-	var newContentHeight = windowHeight - footerHeight - navbarHeight;
-	$('.content-section, .editor-menu').css({'height': newContentHeight});
 }
 
 $(document).ready(function() {
@@ -161,12 +155,6 @@ $(document).ready(function() {
 	$("select[name=wrap]").change(function(){
 		updateWrap();
 	});
-
-	$(window).resize(function () {
-		setHeight();
-	});
-
-	setHeight();
 
 });
 
