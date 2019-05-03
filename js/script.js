@@ -84,7 +84,7 @@ function download_html() {
 }
 
 $(document).ready(function() {
-
+	$('[data-toggle="tooltip"]').tooltip();
 	$('.offcanvas-menu').offcanvasMenu();
 
 	setTimeout(function(){runCode();},1000);
