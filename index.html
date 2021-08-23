@@ -156,7 +156,7 @@
     </div> <!-- .content-section -->
 
     <div class="footer">
-      &copy; 2018 Nretnil Apps | <span class="version">v19.5.3</span>
+      &copy; <span id="year"></span> Nretnil Apps | <span class="version">v21.8.23</span>
     </div>
 
   </div> <!-- offcanvas-main-content -->
@@ -168,5 +168,8 @@
   <script src="https://dev.nretnil.com/staging/tools/js/jquery-plugins/autoHide.jquery.js?v=1.1.1" type="text/javascript" charset="utf-8"></script>
   <script src="js/clipboard.min.js?v=1.5.8" type="text/javascript" charset="utf-8"></script>
   <script src="js/script.js?v=18.8.9" type="text/javascript" charset="utf-8"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </body>
 </html>
